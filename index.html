@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCL Photonics Society Hackathon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>UCL Photonics Society Hackathon</h1>
+    <p>UCLightcommands project website</p>
+  </header>
+
+  <nav aria-label="Main tabs" class="tabs">
+    <button class="tab-button active" data-tab="home">Home</button>
+    <button class="tab-button" data-tab="phase1">Phase 1</button>
+    <button class="tab-button" data-tab="phase2">Phase 2</button>
+    <button class="tab-button" data-tab="phase3">Phase 3</button>
+  </nav>
+
+  <main>
+    <section id="home" class="tab-panel active">
+      <h2>Home</h2>
+      <p>Welcome to the hackathon workspace. Use the tabs above to navigate through each phase and complete the required reports.</p>
+    </section>
+
+    <section id="phase1" class="tab-panel">
+      <h2>Phase 1</h2>
+      <h3>Description and goals</h3>
+      <p>Define the challenge scope, establish team workflow, and prepare the technical and educational plan for the demo.</p>
+
+      <h3>Branching / commits / push / pull requests guide</h3>
+      <ol>
+        <li>Create a branch: <code>git checkout -b feature/your-change</code></li>
+        <li>Commit work in logical steps: <code>git commit -m "Clear summary"</code></li>
+        <li>Push your branch to GitHub</li>
+        <li>Open a pull request and request review</li>
+        <li>Address feedback, then merge after approval</li>
+      </ol>
+
+      <h3>Research questions and answers</h3>
+      <form>
+        <label for="q1">Question 1</label>
+        <textarea id="q1" placeholder="Enter your researched answer..."></textarea>
+
+        <label for="q2">Question 2</label>
+        <textarea id="q2" placeholder="Enter your researched answer..."></textarea>
+
+        <label for="q3">Question 3</label>
+        <textarea id="q3" placeholder="Enter your researched answer..."></textarea>
+
+        <label for="q4">Question 4</label>
+        <textarea id="q4" placeholder="Enter your researched answer..."></textarea>
+      </form>
+
+      <h3>Final report</h3>
+      <form>
+        <label for="architecture">System architecture</label>
+        <textarea id="architecture" placeholder="Describe the system architecture..."></textarea>
+
+        <label for="demo">Demo design and pedagogical goals</label>
+        <textarea id="demo" placeholder="Describe the demo, pedagogy, and learning outcomes..."></textarea>
+
+        <label for="risk">UCL risk assessment</label>
+        <textarea id="risk" placeholder="Document the UCL risk assessment..."></textarea>
+
+        <label for="phase1-photos">Photos taken that day</label>
+        <textarea id="phase1-photos" placeholder="List photo links or notes..."></textarea>
+      </form>
+    </section>
+
+    <section id="phase2" class="tab-panel">
+      <h2>Phase 2</h2>
+      <h3>Description and goals</h3>
+      <p>Execute planned activities, evaluate progress, and capture evidence of outcomes.</p>
+
+      <h3>Results report</h3>
+      <form>
+        <label for="phase2-results">Report of results</label>
+        <textarea id="phase2-results" placeholder="Summarize Phase 2 results..."></textarea>
+
+        <label for="phase2-photos">Photos taken that day</label>
+        <textarea id="phase2-photos" placeholder="List photo links or notes..."></textarea>
+      </form>
+    </section>
+
+    <section id="phase3" class="tab-panel">
+      <h2>Phase 3</h2>
+      <h3>Description and goals</h3>
+      <p>Finalize implementation, review impact, and consolidate final evidence.</p>
+
+      <h3>Results report</h3>
+      <form>
+        <label for="phase3-results">Report of results</label>
+        <textarea id="phase3-results" placeholder="Summarize Phase 3 results..."></textarea>
+
+        <label for="phase3-photos">Photos taken that day</label>
+        <textarea id="phase3-photos" placeholder="List photo links or notes..."></textarea>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll(".tab-button");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.tab;
+        buttons.forEach((b) => b.classList.remove("active"));
+        panels.forEach((panel) => panel.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
