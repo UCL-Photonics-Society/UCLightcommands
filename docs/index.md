@@ -6,6 +6,12 @@ Welcome to the UCL Photonics Society x Thorlabs UK hackathon site.
 
 ## The Hackathon
 
+<div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin: 2rem 0;">
+  <img src="resources/logos/logo_purple.png" alt="UCL Photonics Society" style="height: 120px;">
+  <img src="resources/logos/thorlabs-logo.webp" alt="Thorlabs" style="height: 80px;">
+  <img src="resources/logos/lightcommands_bottom_text.png" alt="LightCommands" style="height: 120px;">
+</div>
+
 <!-- TODO: Describe the hackathon — context, motivation, and what participants will achieve. -->
 
 *Content coming soon.*

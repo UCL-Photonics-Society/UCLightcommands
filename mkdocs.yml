@@ -7,11 +7,10 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: deep purple
-      accent: pink
-  # Uncomment once logo files are added to docs/resources/logos/
-  # logo: resources/logos/ucl-photonics-society.png
-  # favicon: resources/logos/ucl-photonics-society.png
+      primary: custom
+      accent: custom
+  logo: resources/logos/logo_purple.png
+  favicon: resources/logos/logo_purple.png
   features:
     - navigation.tabs
     - navigation.sections
