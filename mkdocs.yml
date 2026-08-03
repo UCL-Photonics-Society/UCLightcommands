@@ -4,9 +4,35 @@ site_url: https://ucl-photonics-society.github.io/UCLightcommands/
 repo_url: https://github.com/UCL-Photonics-Society/UCLightcommands
 
 theme:
-  name: mkdocs
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: pink
+  # Uncomment once logo files are added to docs/resources/logos/
+  # logo: resources/logos/ucl-photonics-society.png
+  # favicon: resources/logos/ucl-photonics-society.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
-  - Hackathon Overview: hackathon.md
-  - Team Progress: progress.md
+  - Phase 1:
+      - Overview: phase1/overview.md
+      - Tasks: phase1/tasks.md
+      - Final Report: phase1/final-report.md
+  - Phase 2:
+      - Overview: phase2/overview.md
+      - Tasks: phase2/tasks.md
+  - Phase 3:
+      - Overview: phase3/overview.md
+  - Photos:
+      - Phase 1: photos/phase1.md
+      - Phase 2: photos/phase2.md
+      - Phase 3: photos/phase3.md
