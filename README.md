@@ -6,15 +6,21 @@ Repository for the UCL Photonics Society | Thorlabs UK Hackathon.
 
 This repository now contains an MKDocs site in `docs/` for participants to document progress through hackathon tasks.
 
+### Build environment (uv)
+
+```bash
+pip install uv
+uv sync
+```
+
 ### Local preview
 
 ```bash
-pip install mkdocs
-mkdocs serve
+uv run mkdocs serve
 ```
 
 ### Build
 
 ```bash
-mkdocs build --strict
+uv run mkdocs build --strict
 ```
