@@ -1,0 +1,12 @@
+site_name: UCLightcommands Hackathon
+site_description: UCL Photonics Society x Thorlabs UK Hackathon
+site_url: https://ucl-photonics-society.github.io/UCLightcommands/
+repo_url: https://github.com/UCL-Photonics-Society/UCLightcommands
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+  - Hackathon Overview: hackathon.md
+  - Team Progress: progress.md
