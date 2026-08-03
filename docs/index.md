@@ -15,9 +15,7 @@ Welcome to the UCL Photonics Society x Thorlabs UK hackathon site.
 
 ### LightCommands
 
-<!-- TODO: Explain the LightCommands project — what it is, its significance, and the research behind it. -->
-
-*Content coming soon.*
+Light Commands is a published research project describing a vulnerability in MEMS microphones where modulated light can be used to inject inaudible and invisible voice commands into systems such as Google Assistant, Amazon Alexa, Apple Siri, and Facebook Portal; the team’s USENIX Security 2020 paper demonstrates successful long-range command injection through windows and outlines why light-responsive microphone behavior can create real-world risks for voice-controlled devices. The original research team also created a dedicated website with extensive resources to help others recreate their demonstrations and make them more accessible.
 
 ---
 
