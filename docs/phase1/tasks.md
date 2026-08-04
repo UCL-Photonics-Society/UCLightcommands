@@ -92,7 +92,7 @@ Each participant must be added as a contributor to the GitHub repository before 
 
 #### 2. Branch → Commit → Pull Request
 
-Never commit directly to `main`. The workflow for every contribution is shown below — all three groups work in parallel on their own branches, then each branch is reviewed and merged into `main` independently.
+The `main` branch is [protected](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches), meaning it cannot be modified directly. Instead, the branch-based workflow for every contribution is shown below: all three groups work in parallel on their own branches, then each branch is reviewed through a [pull request](https://docs.github.com/en/pull-requests/reference/pull-requests) and merged into `main` independently.
 
 ```mermaid
 gitGraph
@@ -122,35 +122,63 @@ gitGraph
 
 The step-by-step for your own contribution:
 
-1. **Create a branch** from `main`, named after your task and group, e.g. `phase1-task1-tx`
+1. **[Create a branch](https://docs.github.com/en/pull-requests/how-tos/commit-changes/managing-branches-within-your-repository)** from `main`, named after your task and group, e.g. `phase1-task1-tx`
     ```bash
-    git checkout main
-    git pull
-    git checkout -b phase1-task1-tx
+    git fetch
+    git checkout phase1-task1-tx
     ```
 
 2. **Edit the relevant page** in `docs/` and save your changes.
 
-3. **Commit** with a short, descriptive message:
+3. **[Add](http://github.com/git-guides/git-pull) and [Commit](https://github.com/git-guides/git-commit)** with a short, descriptive message:
     ```bash
     git add docs/phase1/tasks.md
     git commit -m "Add Tx answers for Phase 1 Task 1"
     ```
 
-4. **Push** your branch to GitHub:
+4. **[Push](https://github.com/git-guides/git-push)** your branch to GitHub:
     ```bash
     git push -u origin phase1-task1-tx
     ```
 
-5. **Open a Pull Request** on GitHub from your branch into `main`. Write a brief description of what you've added.
+5. **Open a [Pull Request](https://docs.github.com/en/pull-requests/reference/pull-requests)** on GitHub from your branch into `main`. Write a brief description of what you've added.
 
 #### 3. Review and merge
 
 All pull requests require **organiser approval** before they can be merged into `main`. Once approved, the PR is merged and the website updates automatically via GitHub Pages.
 
+!!! info "If main has moved on since you created your branch"
+    Other groups' PRs may have been merged into `main` while you were working. Before pushing, bring your branch up to date with a rebase:
+
+    ```bash
+    git fetch origin
+    git rebase origin/main
+    ```
+
+    If git reports conflicts, open the affected file, find the `<<<<<<` markers, resolve them manually, then continue:
+
+    ```bash
+    git add docs/phase1/overview.md
+    git rebase --continue
+    ```
+
+    Once the rebase is clean, `git push --force-with-lease` to update your remote branch.
+
+---
+
+## Resources
+
+- [Light Commands website](https://lightcommands.com/).
+- [Thorlabs website](https://www.thorlabs.com/).
+- [UCL Artificial Optical Radiation (AOR) Safety Standard](https://www.ucl.ac.uk/safety-services/policies/2024/feb/ucl-artificial-optical-radiation-aor-safety-standard).
+- [UCL Risk Assessment Standard](https://www.ucl.ac.uk/safety-services/policies/2022/sep/risk-assessment-standard).
+
 ---
 
 ## Task 0 — Join your group
+
+
+<!-- TODO: Alert block which states that this tasks will be demoed by the organisers -->
 
 Each group leader registers all of their group's members on the [Overview page](overview.md). Only the leader contributes to this task to avoid merge conflicts on the same file.
 
@@ -265,26 +293,10 @@ Each group leader registers all of their group's members on the [Overview page](
     !!! warning "Wait for approval"
         The PR must be approved by the organiser before it is merged. Do not merge it yourself.
 
-!!! info "If main has moved on since you created your branch"
-    Other groups' PRs may have been merged into `main` while you were working. Before pushing, bring your branch up to date with a rebase:
-
-    ```bash
-    git fetch origin
-    git rebase origin/main
-    ```
-
-    If git reports conflicts, open the affected file, find the `<<<<<<` markers, resolve them manually, then continue:
-
-    ```bash
-    git add docs/phase1/overview.md
-    git rebase --continue
-    ```
-
-    Once the rebase is clean, `git push --force-with-lease` to update your remote branch.
 
 ---
 
-## Task 1
+## Task 1 — System constraints
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):
@@ -308,7 +320,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#task-0-join-your-group) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -352,7 +364,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
 ---
 
-## Task 2
+## Task 2 — Core components
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):
@@ -376,7 +388,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#task-0-join-your-group) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -428,7 +440,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
 ---
 
-## Task 3
+## Task 3 — User interactions
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):
@@ -452,7 +464,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#task-0-join-your-group) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 

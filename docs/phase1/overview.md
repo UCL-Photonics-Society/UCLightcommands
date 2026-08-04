@@ -1,24 +1,33 @@
 # Phase 1 — Overview
 
+---
+
 ## Goals
 
-Design the full optical system — transmitter (Tx), receiver (Rx), and surrounding setup — that will be used to demonstrate LightCommands on the day the Thorlabs Photonics Bike visits UCL. Participants will also prepare the risk assessment required to authorise the demonstration.
+- Design the full optical system for the Light Commands demo, including transmitter (Tx), receiver (Rx), and surrounding setup.
+- Create the list of parts which we would like Thorlabs to provide.
+- Prepare the risk assessment form to authorise the demonstration at UCL.
+
+---
 
 ## System Requirements
 
-- Must comply with UCL safety policies
-- Must use Thorlabs parts or devices available to the society
-- Must fit on the Thorlabs Photonics Bike
+The system must:
+- Comply with UCL safety policies.
+- Use Thorlabs parts, or other devices available to the UCL Photonics Society.
+- Fit on the Thorlabs Photonics Bike.
 
-
+---
 
 ## Deliverables
 
-- **Website updates** — each group posts answers to the task questions on the relevant Tasks page after each task
+- **Website updates** — each group posts the answers to the tasks' questions on the relevant page after each task (more information in the Tasks page).
 - **Final report** covering:
     - High-level description of the demo and its pedagogical objectives
     - System architecture with a full parts list
     - UCL risk assessment
+
+---
 
 ## Participants
 
