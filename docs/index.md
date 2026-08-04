@@ -14,6 +14,18 @@ Welcome to the UCL Photonics Society x Thorlabs UK LightCommands hackathon websi
 
 ---
 
+### Goals
+
+This hackathon is centred on real engineering: participants will not just learn concepts, but apply them under genuine constraints — a fixed set of available equipment, UCL safety regulations, and a hard deadline. The final product must also be explainable to a broad, non-technical audience on the day of the demonstration.
+
+Concretely, the goals are to:
+
+- Engineer a [LightCommands](https://arxiv.org/pdf/2006.11946) demonstration for the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe) using [Thorlabs](https://www.thorlabs.com/) equipment, compliant with UCL safety regulations.
+- Prototype the system in collaboration with Thorlabs engineers and prepare for the demonstration.
+- Engage with the community by performing the demonstration to a broad audience.
+
+---
+
 ### Thorlabs' Mobile Photonics Bike
 
 As one of the top distributors of optical components in the world, [Thorlabs](https://www.thorlabs.com/) is commited to multiple initiatives aimed at making the field of Photonics more accecible. One of these initiatives is the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe), an easily maneuverable and eco-friendly mobile lab which transports interactive optics and photonics demonstrations to university campuses. 
@@ -38,17 +50,7 @@ Light Commands is a [published research project](https://arxiv.org/pdf/2006.1194
 
 This setup is what the UCL Photonics Society and Thorlabs have decided to build together to be demonstrated with the Thorlabs Mobile Bike.
 
----
 
-### Goals of the Hackathon
-
-This hackathon is centred on real engineering: participants will not just learn concepts, but apply them under genuine constraints — a fixed set of available equipment, UCL safety regulations, and a hard deadline. The final product must also be explainable to a broad, non-technical audience on the day of the demonstration.
-
-Concretely, the goals are to:
-
-- Engineer a LightCommands demonstration for the Mobile Photonics Bike using Thorlabs equipment, compliant with UCL safety regulations.
-- Prototype the system in collaboration with Thorlabs engineers and prepare for the demonstration.
-- Engage with the community by performing the demonstration to a broad audience.
 
 ---
 
