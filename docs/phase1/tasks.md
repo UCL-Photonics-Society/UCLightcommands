@@ -1,8 +1,7 @@
 # Phase 1 — Tasks
 
-## Workflows
 
-### Groups
+## Groups
 
 Participants are split into three groups — **Transmitter**, **Receiver**, and **System** — and work in parallel across three tasks. Each task concludes with a checkpoint where all groups share progress and align on design decisions.
 
@@ -80,17 +79,17 @@ breadboard?"]:::sys
     classDef cp   fill:#0d0d1e,color:#f5c518,stroke:none
 ```
 
-### Answering the tasks
+## Answering the tasks
 
 Answers to each task's questions must be committed to this repository so progress is visible to everyone and the final report can be built from the documented work.
 
-#### 1. Get access to the repository
+### 1. Get access to the repository
 
 Each participant must be added as a contributor to the GitHub repository before they can push code. Ask the organiser to add your GitHub username to the repository with **Write** access:
 
 [github.com/UCL-Photonics-Society/UCLightcommands](https://github.com/UCL-Photonics-Society/UCLightcommands)
 
-#### 2. Branch → Commit → Pull Request
+### 2. Branch → Commit → Pull Request
 
 The `main` branch is [protected](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches), meaning it cannot be modified directly. Instead, the branch-based workflow for every contribution is shown below: all three groups work in parallel on their own branches, then each branch is reviewed through a [pull request](https://docs.github.com/en/pull-requests/reference/pull-requests) and merged into `main` independently.
 
@@ -143,11 +142,11 @@ The step-by-step for your own contribution:
 
 5. **Open a [Pull Request](https://docs.github.com/en/pull-requests/reference/pull-requests)** on GitHub from your branch into `main`. Write a brief description of what you've added.
 
-#### 3. Formatting your answers
+### 3. Formatting your answers
 
 Answers are written in Markdown. If you are unfamiliar with the syntax used on this site, refer to the [MkDocs Material reference](https://squidfunk.github.io/mkdocs-material/reference/).
 
-#### 4. Review and merge
+### 4. Review and merge
 
 All pull requests require **organiser approval** before they can be merged into `main`. Once approved, the PR is merged and the website updates automatically via GitHub Pages.
 
