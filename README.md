@@ -2,7 +2,9 @@
 
 Repository for the UCL Photonics Society × Thorlabs UK LightCommands Hackathon.
 
-The `docs/` folder contains an MkDocs site where participants document their work. It is published automatically to GitHub Pages on every merge to `main`.
+The `docs/` folder contains an MkDocs site where participants document their work. It is published automatically to GitHub Pages on every merge to `main`:
+
+**https://ucl-photonics-society.github.io/UCLightcommands/**
 
 ---
 
