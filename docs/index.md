@@ -69,7 +69,7 @@ timeline
                   : Demonstration
 ```
 
-- **Phase 1 (14 August)** — The team designs the full optical system: transmitter, receiver, and surrounding setup. All design decisions are documented and sent to Thorlabs for review.
+- **Phase 1 (14th of August, 2pm to 6pm)** — The team designs the full optical system: transmitter, receiver, and surrounding setup. All design decisions are documented and sent to Thorlabs for review.
 - **Phase 2 (early September)** — The team travels to Thorlab's offices in Ely to meet with engineers and prototype the demonstration.
 - **Phase 3 (early October)** — The Mobile Photonics Bike visits UCL and the LightCommands demonstration is performed live to a public audience.
 

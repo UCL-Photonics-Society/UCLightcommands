@@ -4,7 +4,7 @@
 
 🗺️ **Where?** UCL Roberts Building Barlow Room.
 
-⏰ **What time?** TBD.
+⏰ **What time?** 2pm to 6pm.
 
 ---
 
