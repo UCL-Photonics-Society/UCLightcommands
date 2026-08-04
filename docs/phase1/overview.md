@@ -1,5 +1,11 @@
 # Phase 1 — Overview
 
+🗓️ **When?** Friday August 14th.
+
+🗺️ **Where?** UCL Roberts Building Barlow Room.
+
+⏰ **What time?** TBD.
+
 ---
 
 ## Goals

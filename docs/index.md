@@ -75,6 +75,15 @@ timeline
 
 ---
 
+### Registration
+
+Please contact David Gerard (david.gerard.23@ucl.ac.uk) if you would like to participate to the hackathon, providing your GitHub username and a (very) short descrption of why you're interested in this project.
+
+!!! info "Limitted capacity"
+    This hackathon has a capacity of about 10 people, please let us know if you would be able to participate to all three phases.
+
+---
+
 ## The Organisers
 
 ---
