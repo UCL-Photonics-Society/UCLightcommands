@@ -143,7 +143,11 @@ The step-by-step for your own contribution:
 
 5. **Open a [Pull Request](https://docs.github.com/en/pull-requests/reference/pull-requests)** on GitHub from your branch into `main`. Write a brief description of what you've added.
 
-#### 3. Review and merge
+#### 3. Formatting your answers
+
+Answers are written in Markdown. If you are unfamiliar with the syntax used on this site, refer to the [MkDocs Material reference](https://squidfunk.github.io/mkdocs-material/reference/).
+
+#### 4. Review and merge
 
 All pull requests require **organiser approval** before they can be merged into `main`. Once approved, the PR is merged and the website updates automatically via GitHub Pages.
 
@@ -172,6 +176,7 @@ All pull requests require **organiser approval** before they can be merged into 
 - [Thorlabs website](https://www.thorlabs.com/).
 - [UCL Artificial Optical Radiation (AOR) Safety Standard](https://www.ucl.ac.uk/safety-services/policies/2024/feb/ucl-artificial-optical-radiation-aor-safety-standard).
 - [UCL Risk Assessment Standard](https://www.ucl.ac.uk/safety-services/policies/2022/sep/risk-assessment-standard).
+- [MkDocs Material reference](https://squidfunk.github.io/mkdocs-material/reference/).
 
 ---
 
@@ -320,7 +325,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -388,7 +393,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -464,7 +469,7 @@ Each group leader registers all of their group's members on the [Overview page](
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#3-review-and-merge) if `main` has moved on since you branched.
+    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
