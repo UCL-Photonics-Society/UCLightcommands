@@ -8,4 +8,15 @@
   /* Golden yellow from logo text */
   --md-accent-fg-color: #f5c518;
   --md-accent-fg-color--transparent: rgba(245, 197, 24, 0.1);
+
+  /* Vivid purple from logo circuit design — readable on white */
+  --md-typeset-a-color: #7c3aed;
+}
+
+.md-typeset a {
+  color: #7c3aed;
+}
+
+.md-typeset a:hover {
+  color: #4a0e8f;
 }
