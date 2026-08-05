@@ -35,6 +35,7 @@ nav:
   - Home: index.md
   - Phase 1:
       - Overview: phase1/overview.md
+      - Prerequisites: phase1/prerequisites.md
       - Tasks: phase1/tasks.md
       - Final Report: phase1/final-report.md
   - Phase 2:

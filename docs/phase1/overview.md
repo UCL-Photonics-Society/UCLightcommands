@@ -19,9 +19,10 @@
 ## ⚙️ System Requirements
 
 The system must:
-- Comply with UCL safety policies.
-- Use Thorlabs parts, or other devices available to the UCL Photonics Society.
-- Fit on the Thorlabs Photonics Bike.
+
+1. Comply with UCL safety policies.
+2. Use Thorlabs parts, or other devices available to the UCL Photonics Society.
+3. Fit on the Thorlabs Photonics Bike.
 
 ---
 
