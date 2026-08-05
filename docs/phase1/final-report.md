@@ -1,4 +1,4 @@
-# Phase 1 — Final Report
+# Phase 1️⃣ — Final Report
 
 ## Demonstration Description
 

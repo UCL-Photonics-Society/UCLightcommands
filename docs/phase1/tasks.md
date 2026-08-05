@@ -1,7 +1,7 @@
-# Phase 1 — Tasks
+# Phase 1️⃣ — Tasks
 
 
-## Groups
+## 🤖 Groups
 
 Participants are split into three groups — **Transmitter**, **Receiver**, and **System** — and work in parallel across three tasks. Each task concludes with a checkpoint where all groups share progress and align on design decisions.
 
@@ -79,7 +79,7 @@ breadboard?"]:::sys
     classDef cp   fill:#0d0d1e,color:#f5c518,stroke:none
 ```
 
-## Answering the tasks
+## 📝 Answering the tasks
 
 Answers to each task's questions must be committed to this repository so progress is visible to everyone and the final report can be built from the documented work.
 
@@ -169,7 +169,7 @@ All pull requests require **organiser approval** before they can be merged into 
 
 ---
 
-## Resources
+## 📚 Resources
 
 - [Light Commands website](https://lightcommands.com/).
 - [Thorlabs website](https://www.thorlabs.com/).
@@ -179,7 +179,7 @@ All pull requests require **organiser approval** before they can be merged into 
 
 ---
 
-## Task 0 — Join your group
+## Task 0️⃣ — Join your group
 
 
 <!-- TODO: Alert block which states that this tasks will be demoed by the organisers -->
@@ -300,7 +300,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
 ---
 
-## Task 1 — System constraints
+## Task 1️⃣ — System constraints
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):
@@ -368,7 +368,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
 ---
 
-## Task 2 — Core components
+## Task 2️⃣ — Core components
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):
@@ -444,7 +444,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
 ---
 
-## Task 3 — User interactions
+## Task 3️⃣ — User interactions
 
 !!! note "How to submit your answers"
     **1.** Create your branch on GitHub (branch dropdown → type name → **Create branch from 'main'**):

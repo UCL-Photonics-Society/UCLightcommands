@@ -1,4 +1,4 @@
-# Phase 2 — Overview
+# Phase 2️⃣ — Overview
 
 🗓️ **When?** TBD, end of August / early September.
 

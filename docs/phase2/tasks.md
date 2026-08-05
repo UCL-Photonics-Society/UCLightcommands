@@ -1,4 +1,4 @@
-# Phase 2 — Tasks
+# Phase 2️⃣ — Tasks
 
 <!-- TODO: List and describe each task for Phase 2, including instructions and resources. -->
 

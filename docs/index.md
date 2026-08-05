@@ -1,4 +1,4 @@
-# UCLightcommands Hackathon
+# 💡 UCLightcommands Hackathon
 
 Welcome to the UCL Photonics Society x Thorlabs UK LightCommands hackathon website.
 
@@ -10,11 +10,11 @@ Welcome to the UCL Photonics Society x Thorlabs UK LightCommands hackathon websi
 
 ---
 
-## The Hackathon
+## ⚙️ The Hackathon
 
 ---
 
-### Goals
+### 🥅 Goals
 
 This hackathon is centred on real engineering: participants will not just learn concepts, but apply them under genuine constraints — a fixed set of available equipment, UCL safety regulations, and a hard deadline. The final product must also be explainable to a broad, non-technical audience on the day of the demonstration.
 
@@ -26,7 +26,7 @@ Concretely, the goals are to:
 
 ---
 
-### Thorlabs' Mobile Photonics Bike
+### 🚲 Thorlabs' Mobile Photonics Bike
 
 As one of the top distributors of optical components in the world, [Thorlabs](https://www.thorlabs.com/) is commited to multiple initiatives aimed at making the field of Photonics more accecible. One of these initiatives is the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe), an easily maneuverable and eco-friendly mobile lab which transports interactive optics and photonics demonstrations to university campuses. 
 
@@ -39,7 +39,7 @@ The UCL Photonics Society hosted the Mobile Photonics Lab for the first time in 
 
 ---
 
-### LightCommands
+### 🎙️ LightCommands
 
 Light Commands is a [published research project](https://arxiv.org/pdf/2006.11946) describing a vulnerability in MEMS microphones where modulated light can be used to inject inaudible and invisible voice commands into systems such as Google Assistant, Amazon Alexa, Apple Siri, and Facebook Portal. In addition to their paper, the authors of this study created a [dedicated website](https://lightcommands.com/) with extensive resources to help others recreate their demonstrations and make them more accessible.
 
@@ -54,7 +54,7 @@ This setup is what the UCL Photonics Society and Thorlabs have decided to build 
 
 ---
 
-### Structure
+### 🗓️ Structure
 
 The hackathon is structured in three phases across the summer and autumn of 2026:
 
@@ -75,7 +75,7 @@ timeline
 
 ---
 
-### Registration
+### 👉 Registration
 
 Please contact David Gerard (david.gerard.23@ucl.ac.uk) if you would like to participate to the hackathon, providing your GitHub username and a (very) short descrption of why you're interested in this project.
 
@@ -84,16 +84,16 @@ Please contact David Gerard (david.gerard.23@ucl.ac.uk) if you would like to par
 
 ---
 
-## The Organisers
+## 🤍 The Organisers
 
 ---
 
-### UCL Photonics Society
+### 💜 UCL Photonics Society
 
 The UCL Photonics Society is a student society at University College London dedicated to promoting optics and photonics among students and the wider community. The society organises workshops, talks, and outreach events in collaboration with academic and industry partners, with the aim of making photonics accessible and exciting to all.
 
 ---
 
-### Thorlabs
+### ❤️ Thorlabs
 
 [Thorlabs](https://www.thorlabs.com/) is a leading manufacturer and distributor of photonics equipment, supplying lasers, optics, optomechanics, and imaging systems to researchers and engineers worldwide. Through initiatives such as the Mobile Photonics Lab, Thorlabs actively supports photonics education and outreach at universities across Europe.

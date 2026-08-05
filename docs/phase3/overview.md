@@ -1,4 +1,4 @@
-# Phase 3 — Overview
+# Phase 3️⃣ — Overview
 
 🗓️ **When?** TBD, early October.
 

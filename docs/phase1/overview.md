@@ -1,4 +1,4 @@
-# Phase 1 — Overview
+# Phase 1️⃣ — Overview
 
 🗓️ **When?** Friday August 14th.
 
@@ -8,7 +8,7 @@
 
 ---
 
-## Goals
+## 🥅 Goals
 
 - Design the full optical system for the Light Commands demo, including transmitter (Tx), receiver (Rx), and surrounding setup.
 - Create the list of parts which we would like Thorlabs to provide.
@@ -16,7 +16,7 @@
 
 ---
 
-## System Requirements
+## ⚙️ System Requirements
 
 The system must:
 - Comply with UCL safety policies.
@@ -25,7 +25,7 @@ The system must:
 
 ---
 
-## Deliverables
+## ✅ Deliverables
 
 - **Website updates** — each group posts the answers to the tasks' questions on the relevant page after each task (more information in the Tasks page).
 - **Final report** covering:
@@ -35,7 +35,7 @@ The system must:
 
 ---
 
-## Participants
+## 🤖 Participants
 
 === "System"
 
