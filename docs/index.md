@@ -92,6 +92,10 @@ Please contact David Gerard (david.gerard.23@ucl.ac.uk) if you would like to par
 
 The UCL Photonics Society is a student society at University College London dedicated to promoting optics and photonics among students and the wider community. The society organises workshops, talks, and outreach events in collaboration with academic and industry partners, with the aim of making photonics accessible and exciting to all.
 
+<div style="text-align: center;" markdown="span">
+[:fontawesome-brands-linkedin: LinkedIn](https://www.linkedin.com/company/ucl-photonics-society/){ .md-button } &nbsp; [:fontawesome-brands-instagram: Instagram](https://www.instagram.com/ucl.photonicssociety/){ .md-button }
+</div>
+
 ---
 
 ### ❤️ Thorlabs
