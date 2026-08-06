@@ -27,6 +27,8 @@ The `docs/` folder contains an MkDocs site where participants document their wor
 
 ## Contributing
 
+The site is built with **[MkDocs](https://www.mkdocs.org/)** using the **[Material theme](https://squidfunk.github.io/mkdocs-material/)**. Dependencies are managed with **[uv](https://docs.astral.sh/uv/)**.
+
 ### Prerequisites
 
 Before contributing, make sure you have:
@@ -40,6 +42,40 @@ See the [Prerequisites page](https://ucl-photonics-society.github.io/UCLightcomm
 ### Protected branch
 
 [`main` is a protected branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) — direct pushes are disabled. All changes must go through a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and require organiser approval before merging.
+
+### Clone
+
+[Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your local machine:
+
+```bash
+git clone https://github.com/UCL-Photonics-Society/UCLightcommands.git
+cd UCLightcommands
+```
+
+### Setup
+
+Install `uv` ([installation guide](https://docs.astral.sh/uv/getting-started/installation/)), then sync the project environment:
+
+```bash
+pip install uv
+uv sync
+```
+
+### Preview
+
+Serves the site locally with live reload at [http://127.0.0.1:8000](http://127.0.0.1:8000) ([MkDocs docs](https://www.mkdocs.org/getting-started/#creating-a-new-project)):
+
+```bash
+uv run mkdocs serve
+```
+
+### Build
+
+Builds the static site into `site/` and fails on any warning ([`--strict` flag docs](https://www.mkdocs.org/user-guide/cli/#mkdocs-build)):
+
+```bash
+uv run mkdocs build --strict
+```
 
 ### Workflow
 
@@ -77,46 +113,6 @@ If there are [conflicts](https://docs.github.com/en/pull-requests/collaborating-
 git add <resolved-file>
 git rebase --continue
 git push --force-with-lease
-```
-
----
-
-## Local development
-
-The site is built with **[MkDocs](https://www.mkdocs.org/)** using the **[Material theme](https://squidfunk.github.io/mkdocs-material/)**. Dependencies are managed with **[uv](https://docs.astral.sh/uv/)**.
-
-### Clone
-
-[Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your local machine:
-
-```bash
-git clone https://github.com/UCL-Photonics-Society/UCLightcommands.git
-cd UCLightcommands
-```
-
-### Setup
-
-Install `uv` ([installation guide](https://docs.astral.sh/uv/getting-started/installation/)), then sync the project environment:
-
-```bash
-pip install uv
-uv sync
-```
-
-### Preview
-
-Serves the site locally with live reload at [http://127.0.0.1:8000](http://127.0.0.1:8000) ([MkDocs docs](https://www.mkdocs.org/getting-started/#creating-a-new-project)):
-
-```bash
-uv run mkdocs serve
-```
-
-### Build
-
-Builds the static site into `site/` and fails on any warning ([`--strict` flag docs](https://www.mkdocs.org/user-guide/cli/#mkdocs-build)):
-
-```bash
-uv run mkdocs build --strict
 ```
 
 ---
