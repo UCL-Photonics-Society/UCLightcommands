@@ -18,13 +18,16 @@ flowchart TD
     Sys --> T1_Sys
 
     T1_Tx["**Task 1 — Tx**
+System constraints
 UCL laser safety requirements?"]:::tx
 
     T1_Rx["**Task 1 — Rx**
+System constraints
 Available voice-activated devices?
 Minimum laser power?"]:::rx
 
     T1_Sys["**Task 1 — System**
+System constraints
 Bike dimensions?
 Interesting demo features?"]:::sys
 
@@ -35,15 +38,18 @@ Interesting demo features?"]:::sys
     CP1 --> T2_Tx & T2_Rx & T2_Sys
 
     T2_Tx["**Task 2 — Tx**
+Core components
 Thorlabs equipment for:
 laser source, modulation,
 beam collimation?"]:::tx
 
     T2_Rx["**Task 2 — Rx**
+Core components
 How to incorporate targets
 for easiest alignment?"]:::rx
 
     T2_Sys["**Task 2 — System**
+Core components
 Overall system design?
 Enclosure required?"]:::sys
 
@@ -54,14 +60,17 @@ Enclosure required?"]:::sys
     CP2 --> T3_Tx & T3_Rx & T3_Sys
 
     T3_Tx["**Task 3 — Tx**
+User interactions
 How to modulate light
 with a voice command?"]:::tx
 
     T3_Rx["**Task 3 — Rx**
+User interactions
 Which voice-controlled
 features to demonstrate?"]:::rx
 
     T3_Sys["**Task 3 — System**
+User interactions
 Thorlabs equipment for:
 enclosure, mounts,
 breadboard?"]:::sys
