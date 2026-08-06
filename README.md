@@ -39,10 +39,6 @@ Before contributing, make sure you have:
 
 See the [Prerequisites page](https://ucl-photonics-society.github.io/UCLightcommands/phase1/prerequisites/) on the hackathon site for detailed setup instructions.
 
-### Protected branch
-
-[`main` is a protected branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) — direct pushes are disabled. All changes must go through a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and require organiser approval before merging.
-
 ### Clone
 
 [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your local machine:
@@ -78,6 +74,8 @@ uv run mkdocs build --strict
 ```
 
 ### Workflow
+
+[`main` is a protected branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) — direct pushes are disabled. All changes must go through a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and require organiser approval before merging.
 
 1. **[Create a branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)** on GitHub: open the branch dropdown, type your branch name (e.g. `phase1-task1-tx`), and click **Create branch from 'main'**.
 
