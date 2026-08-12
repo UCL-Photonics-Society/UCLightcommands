@@ -61,11 +61,11 @@ The hackathon is structured in three phases across the summer and autumn of 2026
 ```mermaid
 timeline
     title Hackathon Timeline
-    14 Aug 2026  : Phase 1
+    14th Aug 2026  : Phase 1
                  : System design
     Early Sep 2026 : Phase 2
                   : Prototyping
-    Early Oct 2026 : Phase 3
+    5th-8th Oct 2026 : Phase 3
                   : Demonstration
 ```
 

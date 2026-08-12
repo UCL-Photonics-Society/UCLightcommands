@@ -1,6 +1,6 @@
 # Phase 3️⃣ — Overview
 
-🗓️ **When?** TBD, early October.
+🗓️ **When?** 5th to 8th October 2026.
 
 🗺️ **Where?** TBD, UCL.
 
