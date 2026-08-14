@@ -40,7 +40,8 @@ The system must:
 
 === "System"
 
-    *No members yet — complete Task 0 to add your name.*
+    - [David Gerard](https://github.com/David-GERARD) - PhD student at UCL
+    - [Eashan Sahai](https://github.com/EashanSahai) - PhD candidate at UCL
 
 === "Transmitter (Tx)"
 
