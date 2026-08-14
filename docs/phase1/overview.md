@@ -10,6 +10,9 @@
 
 ## 🥅 Goals
 
+!!! important "Primary pedagogical goal"
+    The primary pedagogical goal of this demo is to show, in an interactive and engaging way, that the same information (a voice command) can be transmitted through signals of different natures: acoustic, electrical, and optical, while highlighting the interfaces between these different media.
+
 - Design the full optical system for the Light Commands demo, including transmitter (Tx), receiver (Rx), and surrounding setup.
 - Create the list of parts which we would like Thorlabs to provide.
 - Prepare the risk assessment form to authorise the demonstration at UCL.
@@ -49,4 +52,3 @@ The system must:
 === "Receiver (Rx)"
 
     *No members yet — complete Task 0 to add your name.*
-
