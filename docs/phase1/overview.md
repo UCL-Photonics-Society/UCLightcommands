@@ -47,7 +47,9 @@ The system must:
 
 === "Transmitter (Tx)"
 
-    *No members yet — complete Task 0 to add your name.*
+    *Mahsa Barkabian
+    *Alex Stafford-Williams
+    *Lu Bai
 
 === "Receiver (Rx)"
 
