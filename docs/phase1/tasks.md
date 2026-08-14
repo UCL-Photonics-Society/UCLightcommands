@@ -98,7 +98,16 @@ Each participant must be added as a contributor to the GitHub repository before 
 
 [github.com/UCL-Photonics-Society/UCLightcommands](https://github.com/UCL-Photonics-Society/UCLightcommands)
 
-### 2. Branch → Commit → Pull Request
+### 2. Clone the repository
+
+Clone the repository to your machine and move into the project folder:
+
+```bash
+git clone https://github.com/UCL-Photonics-Society/UCLightcommands.git
+cd UCLightcommands
+```
+
+### 3. Branch → Commit → Pull Request
 
 The `main` branch is [protected](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches), meaning it cannot be modified directly. Instead, the branch-based workflow for every contribution is shown below: all three groups work in parallel on their own branches, then each branch is reviewed through a [pull request](https://docs.github.com/en/pull-requests/reference/pull-requests) and merged into `main` independently.
 
@@ -151,11 +160,11 @@ The step-by-step for your own contribution:
 
 5. **Open a [Pull Request](https://docs.github.com/en/pull-requests/reference/pull-requests)** on GitHub from your branch into `main`. Write a brief description of what you've added.
 
-### 3. Formatting your answers
+### 4. Formatting your answers
 
 Answers are written in Markdown. If you are unfamiliar with the syntax used on this site, refer to the [MkDocs Material reference](https://squidfunk.github.io/mkdocs-material/reference/).
 
-### 4. Review and merge
+### 5. Review and merge
 
 All pull requests require **organiser approval** before they can be merged into `main`. Once approved, the PR is merged and the website updates automatically via GitHub Pages.
 
@@ -326,14 +335,20 @@ Each group leader registers all of their group's members on the [Overview page](
     git checkout phase1-task1-<your-group>
     ```
 
-    **3.** Fill in your answers in the tab below, then commit and push:
+    **3.** Open `docs/phase1/tasks.md` in VSCode, fill in your answers in the tab below, then run a local docs preview to check rendering:
+    ```bash
+    code docs/phase1/tasks.md
+    uv run mkdocs serve
+    ```
+
+    **4.** Add, commit, and push:
     ```bash
     git add docs/phase1/tasks.md
     git commit -m "Add <group> answers for Task 1"
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
+    **5.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#5-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -394,14 +409,20 @@ Each group leader registers all of their group's members on the [Overview page](
     git checkout phase1-task2-<your-group>
     ```
 
-    **3.** Fill in your answers in the tab below, then commit and push:
+    **3.** Open `docs/phase1/tasks.md` in VSCode, fill in your answers in the tab below, then run a local docs preview to check rendering:
+    ```bash
+    code docs/phase1/tasks.md
+    uv run mkdocs serve
+    ```
+
+    **4.** Add, commit, and push:
     ```bash
     git add docs/phase1/tasks.md
     git commit -m "Add <group> answers for Task 2"
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
+    **5.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#5-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
@@ -470,14 +491,20 @@ Each group leader registers all of their group's members on the [Overview page](
     git checkout phase1-task3-<your-group>
     ```
 
-    **3.** Fill in your answers in the tab below, then commit and push:
+    **3.** Open `docs/phase1/tasks.md` in VSCode, fill in your answers in the tab below, then run a local docs preview to check rendering:
+    ```bash
+    code docs/phase1/tasks.md
+    uv run mkdocs serve
+    ```
+
+    **4.** Add, commit, and push:
     ```bash
     git add docs/phase1/tasks.md
     git commit -m "Add <group> answers for Task 3"
     git push
     ```
 
-    **4.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#4-review-and-merge) if `main` has moved on since you branched.
+    **5.** Open a Pull Request from your branch into `main` when ready. See the [rebase note](#5-review-and-merge) if `main` has moved on since you branched.
 
 === "System"
 
