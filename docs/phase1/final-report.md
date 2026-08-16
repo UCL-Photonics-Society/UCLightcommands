@@ -40,7 +40,7 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 **Demo 2 - Laser light source to Smart Target**
 
 1. With the enclosure opened, the different components of the demonstration are explained to the attendees.
-2. After closing the enclosure, the laser source is turned on, and a voice command signal (coming from a microphone or a recorded audio file) is modulated onto the amplitude of the continuous wave, hitting the microphone of a smart target (Smartphone or home assistant).
+2. After closing the enclosure, the laser source is turned on, and a voice command signal (coming from a microphone or a recorded audio file) is modulated onto the amplitude of the continuous wave, hitting the microphone of a smart target (Smartphone or home assistant). We envision this smart target to be connected to a peripheral (such as a smart lamp) to make the demonstration more interactive.
 3. By changing the input power of the laser, the notion of the minimum activation power is demonstrated.
 
 ---
@@ -51,7 +51,13 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 
 !!! question "Provide a high-level description of the full system architecture: how do the transmitter, receiver, and surrounding hardware work together?"
 
+Both demos share the same underlying signal chain: an electrical audio signal is used to drive the optical output power of a light source (LED or laser), which is shaped and aimed by free-space optics, then converted back into an electrical/acoustic signal by a MEMS microphone diaphragm at the receiver.
+
 **Demo 1 - LED light source to Microphone**
+
+The **transmitter (Tx)** takes an audio signal from one of three interchangeable sources — a live microphone, a pre-recorded voice command, or a signal generator (used to inject test tones for the SNR demonstration) — and feeds it to an **LED driver**, which converts the electrical waveform into a proportional drive current. This modulates the optical output power of the **LED** in amplitude, encoding the audio signal onto the light itself. A **diaphragm** placed after the LED acts as an adjustable aperture, giving a second, independent control over the optical power reaching the target (in addition to the LED driver's electrical gain). A **collimator** then narrows the diverging LED output into a roughly parallel beam so that optical power stays concentrated over the free-space path to the receiver.
+
+The **receiver (Rx)** is simply a **microphone and amplifier**: the modulated light strikes the microphone's diaphragm directly, which responds to the intensity fluctuations of the light in the same way it would to an acoustic pressure wave (the same photoacoustic/photothermal coupling exploited in the original LightCommands attack). The amplifier boosts this recovered signal and feeds it to an **oscilloscope**, so the audience can directly see the transmitted waveform being reconstructed. Because every stage (source, LED driver, diaphragm aperture, collimation, distance) is exposed and independently adjustable, this setup is used to illustrate how each parameter affects **signal-to-noise ratio** at the receiver.
 
 ```mermaid
 flowchart LR
@@ -71,6 +77,10 @@ flowchart LR
 ```
 
 **Demo 2 - Laser light source to Smart Target**
+
+Demo 2 follows the same source → driver → emitter → collimator → receiver logic as Demo 1, but replaces the LED with a **laser** to reach the higher optical power which might be needed to activate a real device, and replaces the exposed microphone with a **smart target** (smartphone or home assistant). The laser driver, laser, and collimator direct a modulated beam across a short free-space path onto the smart target's built-in MEMS microphone, which decodes the light modulation as if it were a spoken voice command. Once the target's voice assistant recognises the injected command, it drives a connected **peripheral** (e.g. a smart plug, light, or the device's own speaker/screen) to visibly confirm activation to the audience.
+
+Because the laser is driven at powers up to the worst-case 60 mW design point, the entire **Tx** and **Rx** are housed inside a shared **enclosure**, integrating a **laser safety panel** (rated to the source's wavelength) and an **interlock switch**  wired into the laser driver's interlock input.  This lets the demonstrator open the enclosure to explain the components to the audience, then close it before energising the laser, keeping the beam fully contained during operation. 
 
 ```mermaid
 flowchart LR
@@ -121,10 +131,10 @@ flowchart LR
 
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 | **2** | Enclosure | [XE25C11D/M](https://www.thorlabs.com/item/XE25C11D_M) or [XE25C9D/M](https://www.thorlabs.com/item/XE25C9D_M) | |
 | **2** | Laser Safety Panel | [LWxP1](https://www.thorlabs.com/certified-laser-safety-panels)| Choice will depend on the laser's wavelength |
 | **2** | Interlock system | [Interlock Switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
+| **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
 ---
 
