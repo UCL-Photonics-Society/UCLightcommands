@@ -43,15 +43,19 @@ The system must:
 
 === "System"
 
+    - Ronit Sohanpal - Postdoc student at UCL 
     - [David Gerard](https://github.com/David-GERARD) - PhD student at UCL
-    - [Eashan Sahai](https://github.com/EashanSahai) - PhD candidate at UCL
+    - [Eashan Sahai](https://github.com/EashanSahai) - PhD student at UCL
 
 === "Transmitter (Tx)"
 
-    *Mahsa Barkabian
-    *Alex Stafford-Williams
-    *Lu Bai
+    * Mahsa Barkabian - PhD student at UCL
+    * Alex Stafford-Williams - PhD student at UCL
+    * Lu Bai - PhD student at UCL
 
 === "Receiver (Rx)"
 
-    *No members yet — complete Task 0 to add your name.*
+    - Min Jarmolovicius - PhD student at UCL
+    - Bohua Deng - PhD student at UCL
+    - Froher Nabizadah - Master's student at Imperial College London
+    - Taylan Arslan - Undergraduate student at UCL
