@@ -356,7 +356,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    About 3m by 1m.
 
     ---
 
@@ -364,7 +364,8 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    - Main goal: demonstrate that the same information can be carried over by different media (acoustic, electrical, optical), and converted from one to another.
+    - Auxilary goal: for some of these media, demonstrate what impacts signal quality.
 
 === "Transmitter (Tx)"
 
