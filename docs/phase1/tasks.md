@@ -364,7 +364,10 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    - **Demo 1** — adjustable optical power (LED driver gain + diaphragm aperture) and beam collimation/focus, with a live oscilloscope trace, so the audience can directly see how each parameter changes the received signal-to-noise ratio.
+    - **Demo 2** — ramping the laser's input power live to find the minimum activation power for a real smart device, with the target driving a connected peripheral (e.g. a smart lamp) so the audience gets an unambiguous, visible confirmation that the voice command worked.
+
+    See the [Final Report — System Description](final-report.md#system-description) and [Pedagogical Goals](final-report.md#pedagogical-goals) for details.
 
 === "Transmitter (Tx)"
 
@@ -372,7 +375,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Per [BS EN 60825-1](https://www.gov.uk/government/publications/laser-radiation-safety-advice/laser-radiation-safety-advice#fn:2) and the [UCL AOR Safety Standard](https://www.ucl.ac.uk/safety-services/policies/2024/feb/ucl-artificial-optical-radiation-aor-safety-standard), the bare laser diode used in Demo 2 (up to 60 mW CW) is a **Class 3B** emitter, so it can't be left accessible to the public. We're addressing this by treating the whole demo as a **Class 1 laser product**: the laser, driver, and beam path sit inside a fully enclosed housing with a hardware interlock (not software) that cuts power the instant the enclosure is opened, plus a laser safety panel (OD 6 at the source wavelength) facing the audience. Alignment is only ever done at minimum power using an IR detector card, never by eye, and only briefed demonstrators operate the laser. Full detail in the [Final Report — UCL Risk Assessment](final-report.md#ucl-risk-assessment).
 
 === "Receiver (Rx)"
 
@@ -380,7 +383,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    We're targeting a commercial smart device with a MEMS microphone — a smartphone or a home assistant (e.g. Google Home) — as these are the most recognisable to a public audience. The exact model is still **TBD**; as a fallback for venues with poor network/firewall access to cloud assistants, we're also looking into a custom, locally-run audio-to-text system (e.g. on a Raspberry Pi). See the [Final Report — Receiver Parts](final-report.md#receiver-parts).
 
     ---
 
@@ -388,7 +391,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Reported minimum activation power varies significantly by device — as low as 0.5 mW for a Google Home up to 60 mW for a Samsung Galaxy S9, at 30 cm. We're designing Demo 2 around the worst-case 60 mW scenario. See the [Final Report — Introduction](final-report.md#introduction).
 
 ---
 
@@ -430,7 +433,12 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Both demos share the same source → driver → emitter → collimator → receiver signal chain (see the [System Description](final-report.md#system-description) diagrams):
+
+    - **Demo 1** (LED → microphone) — an audio source drives an LED via an LED driver; the light passes through an adjustable diaphragm and a collimator before hitting a microphone/amplifier, whose output is shown on an oscilloscope.
+    - **Demo 2** (laser → smart target) — an audio source drives a laser via a laser driver (gated by a hardware interlock); the collimated beam hits a smart target inside an enclosure, and the target drives a connected peripheral to show activation.
+
+    The two setups run side by side on separate optical breadboards at opposite ends of the Mobile Photonics Lab.
 
     ---
 
@@ -438,7 +446,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Yes, but only for Demo 2. Because the laser is driven up to the worst-case 60 mW design point (a Class 3B embedded emitter), the laser, driver, and beam path are housed in a fully enclosed, interlocked housing ([XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M)) with a laser safety panel facing the public. Demo 1 uses a low-power LED and doesn't need an enclosure. See the [Final Report — Other Parts](final-report.md#other-parts-mounts-enclosure-etc) and [UCL Risk Assessment](final-report.md#ucl-risk-assessment).
 
 === "Transmitter (Tx)"
 
@@ -446,7 +454,9 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    **Demo 2 (laser):** driver [LDC205C](https://www.thorlabs.com/item/LDC205C), with its modulation input taking a 0–5V analogue signal and its interlock pin wired to the enclosure's interlock switch. The laser diode itself is still **TBD** — it needs to reach 60 mW, and we're weighing a visible-wavelength diode (easier to align by eye) against a near-IR diode (invisible, so safer, but harder to align without an IR viewer).
+
+    **Demo 1 (LED):** driver [CD40](https://www.thorlabs.com/4.0-a-led-driver) or the [T-Cube™ LED Driver](https://www.thorlabs.com/t-cube-tm-led-driver), also taking a 0–5V analogue modulation input, driving an [M450LP2](https://www.thorlabs.com/item/M450LP2) visible LED — chosen for the highest power reasonably achievable in order to get a good SNR at the receiver. See the [Final Report — Transmitter Parts](final-report.md#transmitter-parts).
 
     ---
 
@@ -454,7 +464,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    The same driver used for each source performs the modulation, since both are analogue current drivers with a dedicated modulation input: the [LDC205C](https://www.thorlabs.com/item/LDC205C) for the Demo 2 laser, and the [CD40](https://www.thorlabs.com/4.0-a-led-driver)/[T-Cube™ LED Driver](https://www.thorlabs.com/t-cube-tm-led-driver) for the Demo 1 LED. In both cases, the audio source (microphone, recorded file, or signal generator) is fed directly into that modulation input, converting the electrical waveform into a proportional drive current that amplitude-modulates the optical output.
 
     ---
 
@@ -462,7 +472,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Demo 1 (LED): [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) collimation adaptor (preferably a zoom housing, to demonstrate the effect of beam focus), mounted via a [CP33/M](https://www.thorlabs.com/item/CP33_M) LED cage plate. Demo 2 (laser): [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) cage plate collimation mount, with an [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) strain relief cable to interface the diode to its driver. See the [Final Report — Transmitter Parts](final-report.md#transmitter-parts).
 
 === "Receiver (Rx)"
 
@@ -470,7 +480,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    The target (or, for Demo 1, the MEMS microphone) needs to sit on a stage so its microphone can be positioned precisely at the laser/LED's focal point — this stage is still **TBD**. For low-power alignment, an NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) is used to visualise where the invisible laser beam is actually landing before bringing the target into position. See the [Final Report — Receiver Parts](final-report.md#receiver-parts) and [Other Parts](final-report.md#other-parts-mounts-enclosure-etc).
 
 ---
 
@@ -512,7 +522,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) enclosure (open top, laser safety panel facing the public), fitted with a [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)-series laser safety panel (exact panel chosen for the laser's wavelength) and a hardware interlock (lever switch + 2.5 mm jack) wired into the [LDC205C](https://www.thorlabs.com/item/LDC205C) driver's interlock input. See the [Final Report — Other Parts](final-report.md#other-parts-mounts-enclosure-etc).
 
     ---
 
@@ -520,7 +530,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    [CP33/M](https://www.thorlabs.com/item/CP33_M) LED cage plate mount and [SM1D12](https://www.thorlabs.com/item/SM1D12) diaphragm for Demo 1; [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) cage plate collimation mount for Demo 2's laser diode. See the [Final Report — Transmitter Parts](final-report.md#transmitter-parts).
 
     ---
 
@@ -528,7 +538,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Two [MB4560/M](https://www.thorlabs.com/item/MB4560_M) optical breadboards, one per demo, at opposite ends of the Mobile Photonics Lab. Demo 2's enclosure needs a 525 mm × 375 mm footprint; Demo 1 could use a smaller breadboard. See the [Final Report — Other Parts](final-report.md#other-parts-mounts-enclosure-etc).
 
 === "Transmitter (Tx)"
 
@@ -536,7 +546,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    The audio signal (from a microphone, a recorded file, or a signal generator) is fed as an analogue 0–5V modulation input directly into the LED/laser driver, which converts the electrical waveform into a proportional drive current — this amplitude-modulates the optical output power in real time, encoding the voice command onto the light itself. See the [Final Report — System Description](final-report.md#system-description).
 
 === "Receiver (Rx)"
 
@@ -544,4 +554,4 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    Beyond simply activating the smart target's voice assistant, we want the target to drive a connected peripheral (e.g. a smart lamp) so the audience gets a clear, visible confirmation that the injected command worked. We'll also vary the laser's input power live to demonstrate the concept of a minimum activation power for the target. See the [Final Report — Session Description](final-report.md#session-description).
