@@ -21,6 +21,15 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 - **Showcase** how a signal carrying information (in our case a voice command) can be carried over different media (acoustic, electronic, optical), and what mechanisms are used to convert from one medium to another (microphone, optical modulation).
 - **Introduce** the notion of *signal to noise ratio*, **explain** how the power per surface area at the target impacts this metric, and **demonstrate** what influences this metric (input power, beam focus, distance to target). 
 
+**Recommanded pedagogical material**
+
+We recommand creating laminated cards explaining the operating principle of various components used in the demo. This includes:
+
+- MEMS Microphones.
+- LED and Laser diodes.
+- Collimation.
+- Signal to noise ratio.
+
 ---
 
 ### Session Description
