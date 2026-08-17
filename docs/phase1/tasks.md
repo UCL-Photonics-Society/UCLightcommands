@@ -356,7 +356,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    *No answer yet.*
+    About 3m by 1m.
 
     ---
 
