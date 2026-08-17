@@ -30,7 +30,6 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 **Setup**
 
 - The team sets up the two demos on opposite ends of the Mobile Photonics Lab, and performs the necessary alignment using personal protective equipment (PPE).
-    - Laser alignment is performed at minimum power using an IR card.
 - Before the sessions starts, all the features of the demos are tested as a final rehersal, with particular emphasis on testing laser safety features.
 
 **Demo 1 - LED light source to Microphone**
@@ -118,8 +117,8 @@ flowchart LR
 | **1** | Diaphragme with SM1 threads | [SM1D12](https://www.thorlabs.com/item/SM1D12)| Used as an aditional control for LED Power|
 | **1** | Collimation adaptor with SM1 thread| [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) | Preferably a zoom housing in order to desmonstrate the impact of beam focus on received signal.|
 | **2** | Laser Driver | [LDC205C](https://www.thorlabs.com/item/LDC205C) | Modulation input connected to analogue source delivering a 0-5V signal, and interlock pin connected to interlock lever swich.|
-| **2** | 980 nm IR Laser diode (PIN code A) | [L980P100A](L980P100A) | The 100mW max power of this diode covers the activation power worst case scenario, |
-| **2** | Strain relief cable Pin A to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code.|
+| **2** | Laser diode | **TBD** | Must reach 60mW of power. However not sure which to choose. Visible light would be easier to align at low power, but far IR would be more safe. |
+| **2** | Strain relief cable to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code to interface with diode|
 | **2** | Cage Plate Collimation Mount | [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) | |
 
 ---
@@ -143,7 +142,7 @@ flowchart LR
 |------|------|-------------------|-------|
 | **2** | NIR Detector Card | [VRC7](https://www.thorlabs.com/item/VRC7) | Used at low power to align the laser with the target and demonstrate the presence of IR light. |
 | **2** | Enclosure | [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) | Top open, with laser safety panel facing the public.|
-| **2** | Laser Safety Panel | [LW2P2/M](https://www.thorlabs.com/item/LW1P2_M)| Optical density = 6 at 980nm (Transmission = 10^-4%)|
+| **2** | Laser Safety Panel | [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)| Exact panel will depend of wavelength of laser |
 | **2** | Interlock system | [Interlock Switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
@@ -156,7 +155,7 @@ flowchart LR
 
 **Laser classification (Setup 2)**
 
-The [L980P100A](L980P100A) diode used in Setup 2 emits up to 100 mW CW at 980 nm. Per [BS EN 60825-1](https://www.gov.uk/government/publications/laser-radiation-safety-advice/laser-radiation-safety-advice#fn:2), a bare/embedded emitter at this wavelength and power is a **Class 3B laser**: it is well above the Class 1/1M/2/2M/3R accessible emission limits for the near-infrared, but stays below the 500 mW CW threshold separating Class 3B from Class 4. Class 3B means direct intrabeam viewing and specular reflections are hazardous to the eye (and, to a lesser extent, the skin), while diffuse reflections are normally safe.
+Per [BS EN 60825-1](https://www.gov.uk/government/publications/laser-radiation-safety-advice/laser-radiation-safety-advice#fn:2), a bare/embedded emitter at 60mW is a **Class 3B laser**: it is well above the Class 1/1M/2/2M/3R accessible emission limits for the near-infrared, but stays below the 500 mW CW threshold separating Class 3B from Class 4. Class 3B means direct intrabeam viewing and specular reflections are hazardous to the eye (and, to a lesser extent, the skin), while diffuse reflections are normally safe.
 
 Because the laser diode, and beam path are fully housed inside the interlocked [enclosure](#other-parts-mounts-enclosure-etc), the demonstration as a whole is designed and operated as a **Class 1 laser product**: under normal operating conditions (enclosure closed, interlock made), there is no accessible emission above Class 1 limits anywhere the audience or demonstrators can be. The embedded Class 3B engine is only ever accessible with the enclosure open, during which the laser is de-energised or run at minimum power for alignment, as described in the [Session Description](#session-description).
 
