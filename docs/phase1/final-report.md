@@ -30,6 +30,7 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 **Setup**
 
 - The team sets up the two demos on opposite ends of the Mobile Photonics Lab, and performs the necessary alignment using personal protective equipment (PPE).
+    - Laser alignment is performed at minimum power using an IR card.
 - Before the sessions starts, all the features of the demos are tested as a final rehersal, with particular emphasis on testing laser safety features.
 
 **Demo 1 - LED light source to Microphone**
@@ -84,11 +85,13 @@ Because the laser is driven at powers up to the worst-case 60 mW design point, t
 
 ```mermaid
 flowchart LR
+    Source --> LDR[Laser Driver]
+    LDR --> INT{Interlock closed?}
     subgraph Enclosure
+        direction LR
+        INT -- yes --> LAS[Laser]
         subgraph Tx
             direction LR
-            Source --> LDR
-            LDR --> LAS[Laser]
             LAS -.-> COL[Colimator]
         end
         subgraph Rx
@@ -109,8 +112,15 @@ flowchart LR
 
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **1** | Diaphragme | [CP20D](https://www.thorlabs.com/item/CP20D?aID=51bff524c92ec93e4ab0b4d2f620ccca&aC=1)| Used as an aditional control for LED Power|
-| **2** | | | |
+| **1** | LED Driver | [CD40](https://www.thorlabs.com/4.0-a-led-driver) or [T-Cube™ LED Driver](https://www.thorlabs.com/t-cube-tm-led-driver) | Modulation input connected to analogue source delivering a 0-5V signal. |
+| **1** | LED | [M450LP2](https://www.thorlabs.com/item/M450LP2) | Need a visible light LED which can achieve resonably high power in order to achieve reasonable SNR|
+| **1** | LED Cage Plate mount with SM1 thread | [CP33/M](https://www.thorlabs.com/item/CP33_M) | |
+| **1** | Diaphragme with SM1 threads | [SM1D12](https://www.thorlabs.com/item/SM1D12)| Used as an aditional control for LED Power|
+| **1** | Collimation adaptor with SM1 thread| [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) | Preferably a zoom housing in order to desmonstrate the impact of beam focus on received signal.|
+| **2** | Laser Driver | [LDC205C](https://www.thorlabs.com/item/LDC205C) | Modulation input connected to analogue source delivering a 0-5V signal, and interlock pin connected to interlock lever swich.|
+| **2** | 980 nm IR Laser diode (PIN code A) | [L980P100A](L980P100A) | The 100mW max power of this diode covers the activation power worst case scenario, |
+| **2** | Strain relief cable Pin A to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code.|
+| **2** | Cage Plate Collimation Mount | [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) | |
 
 ---
 
@@ -131,8 +141,9 @@ flowchart LR
 
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **2** | Enclosure | [XE25C11D/M](https://www.thorlabs.com/item/XE25C11D_M) or [XE25C9D/M](https://www.thorlabs.com/item/XE25C9D_M) | |
-| **2** | Laser Safety Panel | [LWxP1](https://www.thorlabs.com/certified-laser-safety-panels)| Choice will depend on the laser's wavelength |
+| **2** | NIR Detector Card | [VRC7](https://www.thorlabs.com/item/VRC7) | Used at low power to align the laser with the target and demonstrate the presence of IR light. |
+| **2** | Enclosure | [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) | Top open, with laser safety panel facing the public.|
+| **2** | Laser Safety Panel | [LW2P2/M](https://www.thorlabs.com/item/LW1P2_M)| Optical density = 6 at 980nm (Transmission = 10^-4%)|
 | **2** | Interlock system | [Interlock Switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
