@@ -119,6 +119,8 @@ flowchart LR
 | **1&2** | Jack to breadboard connector | | Connects the MEMS microphone to the audio amplifier. |
 | **1&2** | Microphone amplifier | [With speaker](https://www.aliexpress.com/item/1005008978691693.html?src=google&src=google&albch=shopping&acnt=603-455-9033&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_oFgTQeV&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005008978691693&ds_e_product_merchant_id=5558341424&ds_e_product_country=GB&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=23634837834&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=23634872088&gbraid=0AAAABCRFad-11uVnMhmVAd1T4jeV-ae9r&gclid=Cj0KCQjw4orUBhCjARIsAIbF3qxqYTl5ywh0K1r1bAmPTsok-qVuDO4BY-u9vgjxIne6pBxGSMCLEW0aAqI9EALw_wcB), [Commercial amplifier](https://www.amazon.com/gp/product/B01MS22YWV?th=1) | The Commercial amplifier is the one used in the Lightcommands study, and can be connected to either the microphone or a computer playing an audio file. |
 
+!!! note "Prototyping before Phase 2"
+    The custom interface stage that converts the audio source (microphone, audio file, or signal generator) into the 0-5V analogue signal fed to the LED/laser driver's modulation input is not an off-the-shelf part, and will be prototyped and tested at UCL ahead of Phase 2.
 
 **Optical modulation**
 
@@ -150,6 +152,9 @@ flowchart LR
 | **2** | Smart device | **TBD**: Smartphone, Google Home... | Ideal case as the most recognisable items on which to demonstrate Light Commands.|
 | **2** | Custom local audio to text system | Smartphone, Google Home... | In some venues, poor network or firewall restrictions might prevent the use of smart devices. We are thus looking into designing an audio to text device that would run locally on a Raspberry Pi or laptop.|
 | **2** | Stage for the target | **TBD** | Need to find the best solution to safely align the microphone of the target with the laser beam.|
+
+!!! note "Prototyping before Phase 2"
+    The custom receive chain from the microphone through to the oscilloscope, along with the other custom systems in this section (the local audio-to-text system and the target alignment stage), are not off-the-shelf parts, and will be prototyped and tested at UCL ahead of Phase 2.
 
 ---
 
