@@ -70,10 +70,10 @@ The **receiver (Rx)** is simply a **microphone and amplifier**: the modulated li
 
 ```mermaid
 flowchart LR
+    Source --> LDR[LED driver]
+    LDR --> LED
     subgraph Tx
         direction LR
-        Source --> LDR[LED driver]
-        LDR --> LED
         LED[LED] -.-> DPG[Diaphragm]
         DPG -.-> COL[Collimator]
     end
@@ -159,7 +159,7 @@ flowchart LR
 | **1** | Audio amplifier | [With speaker](https://www.aliexpress.com/item/1005008978691693.html?src=google&src=google&albch=shopping&acnt=603-455-9033&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_oFgTQeV&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005008978691693&ds_e_product_merchant_id=5558341424&ds_e_product_country=GB&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=23634837834&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=23634872088&gbraid=0AAAABCRFad-11uVnMhmVAd1T4jeV-ae9r&gclid=Cj0KCQjw4orUBhCjARIsAIbF3qxqYTl5ywh0K1r1bAmPTsok-qVuDO4BY-u9vgjxIne6pBxGSMCLEW0aAqI9EALw_wcB), [Commercial amplifier](https://www.amazon.com/gp/product/B01MS22YWV?th=1) | Used to amplify the audio signal, to be connected to a speaker and/or an oscilloscope|
 | **1** | Oscilloscope | Can borrow equipment at UCL, but **TBD** for other locations. There are very cheap [DIY kits](https://www.amazon.co.uk/Treedix-Oscilloscope-Handheld-Real-Time-Sampling/dp/B0C85S78GY/ref=sr_1_5?crid=1NEUBW09IQYA7&dib=eyJ2IjoiMSJ9.H9DIHbhw4FeyXoXASVAe4XSv9G3WjfCGlMXlogTJOvTjj2r_osEPlKB1wgHY-HqAUgDXL7--KPd6ddFmYNmDUVJ-7fGv_BmLUz4qOMc1RdyiwGN74Dpc4GWP0fFS2dIqSEiIGYlAt7v_RS30HoF_w_UFoBepo_54g9E-iIGFS5LVrzqLsxREZH7YBAMFdxq-E9gdWAcnTZymJI6oLLPAWBmKr6D4aoV49dw4T5M79KVEVjdCzAbUgmk8sPp0WVrIGkuBickgcMx1jzMBKlUjQcZ6sg4qLJ3cxi9CSohFX0M.tTTN_dSwMImGVhltdT_G6N1H4WQZsTWXdkQuAeXl0vk&dib_tag=se&keywords=diy+oscilloscope&qid=1786961372&sprefix=DIY+osc%2Caps%2C125&sr=8-5) on Amazon. | Used to visualise the received signal, and perform spectral analysis to illustrate signal to noise ratio considerations. |
 | **2** | Smart device | **TBD**: Smartphone, Google Home... | Ideal case as the most recognisable items on which to demonstrate Light Commands.|
-| **2** | Custom local audio to text system | Smartphone, Google Home... | In some venues, poor network or firewall restrictions might prevent the use of smart devices. We are thus looking into designing an audio to text device that would run locally on a Raspberry Pi or laptop.|
+| **2** | Custom local audio to text system | **TBD** | In some venues, poor network or firewall restrictions might prevent the use of smart devices. We are thus looking into designing an audio to text device that would run locally on a Raspberry Pi or laptop.|
 | **2** | Stage for the target | **TBD** | Need to find the best solution to safely align the microphone of the target with the laser beam.|
 
 !!! note "Prototyping before Phase 2"
@@ -177,7 +177,6 @@ flowchart LR
 | **2** | Enclosure | [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) | Top open, with laser safety panel facing the public.|
 | **2** | Laser Safety Panel | [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)| Exact panel will depend of wavelength of laser |
 | **2** | Interlock system | [Lever switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
-| **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
 ---
