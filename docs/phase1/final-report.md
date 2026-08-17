@@ -30,7 +30,6 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 **Setup**
 
 - The team sets up the two demos on opposite ends of the Mobile Photonics Lab, and performs the necessary alignment using personal protective equipment (PPE).
-    - Laser alignment is performed at minimum power using an IR card.
 - Before the sessions starts, all the features of the demos are tested as a final rehersal, with particular emphasis on testing laser safety features.
 
 **Demo 1 - LED light source to Microphone**
@@ -118,8 +117,8 @@ flowchart LR
 | **1** | Diaphragme with SM1 threads | [SM1D12](https://www.thorlabs.com/item/SM1D12)| Used as an aditional control for LED Power|
 | **1** | Collimation adaptor with SM1 thread| [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) | Preferably a zoom housing in order to desmonstrate the impact of beam focus on received signal.|
 | **2** | Laser Driver | [LDC205C](https://www.thorlabs.com/item/LDC205C) | Modulation input connected to analogue source delivering a 0-5V signal, and interlock pin connected to interlock lever swich.|
-| **2** | 980 nm IR Laser diode (PIN code A) | [L980P100A](L980P100A) | The 100mW max power of this diode covers the activation power worst case scenario, |
-| **2** | Strain relief cable Pin A to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code.|
+| **2** | Laser diode | **TBD** | Must reach 60mW of power. However not sure which to choose. Visible light would be easier to align at low power, but far IR would be more safe. |
+| **2** | Strain relief cable to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code to interface with diode|
 | **2** | Cage Plate Collimation Mount | [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) | |
 
 ---
@@ -143,7 +142,7 @@ flowchart LR
 |------|------|-------------------|-------|
 | **2** | NIR Detector Card | [VRC7](https://www.thorlabs.com/item/VRC7) | Used at low power to align the laser with the target and demonstrate the presence of IR light. |
 | **2** | Enclosure | [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) | Top open, with laser safety panel facing the public.|
-| **2** | Laser Safety Panel | [LW2P2/M](https://www.thorlabs.com/item/LW1P2_M)| Optical density = 6 at 980nm (Transmission = 10^-4%)|
+| **2** | Laser Safety Panel | [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)| Exact panel will depend of wavelength of laser |
 | **2** | Interlock system | [Interlock Switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
@@ -153,10 +152,32 @@ flowchart LR
 
 !!! question "Complete the UCL risk assessment for the demonstration. Identify each hazard, its likelihood and severity, and the mitigations in place."
 
-**Answer**
+
+**Laser classification (Setup 2)**
+
+Per [BS EN 60825-1](https://www.gov.uk/government/publications/laser-radiation-safety-advice/laser-radiation-safety-advice#fn:2), a bare/embedded emitter at 60mW is a **Class 3B laser**: it is well above the Class 1/1M/2/2M/3R accessible emission limits for the near-infrared, but stays below the 500 mW CW threshold separating Class 3B from Class 4. Class 3B means direct intrabeam viewing and specular reflections are hazardous to the eye (and, to a lesser extent, the skin), while diffuse reflections are normally safe.
+
+Because the laser diode, and beam path are fully housed inside the interlocked [enclosure](#other-parts-mounts-enclosure-etc), the demonstration as a whole is designed and operated as a **Class 1 laser product**: under normal operating conditions (enclosure closed, interlock made), there is no accessible emission above Class 1 limits anywhere the audience or demonstrators can be. The embedded Class 3B engine is only ever accessible with the enclosure open, during which the laser is de-energised or run at minimum power for alignment, as described in the [Session Description](#session-description).
+
+**Safety measures in place for Setup 2**
+
+- **Full enclosure** ([XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M)) housing the entire beam path from laser to target, so the 980 nm beam is never accessible during normal operation.
+- **Hardware interlock** (switch + 2.5 mm jack wired into the [LDC205C](https://www.thorlabs.com/item/LDC205C) driver's interlock input) that disables laser emission the instant the enclosure is opened — enforced by the driver itself, not by software or operator discipline.
+- **Laser safety panel** ([LW2P2/M](https://www.thorlabs.com/item/LW1P2_M), OD 6 at 980 nm, i.e. transmission ≈ 10⁻⁴ %) facing the public, attenuating any residual/scattered light to well below Class 1 exposure limits even if viewed directly.
+- **Low-power alignment procedure**: the beam is invisible (980 nm), so alignment and re-alignment are always performed at minimum drive current using the [VRC7](https://www.thorlabs.com/item/VRC7) NIR detector card to visualise the beam, never by eye.
+- **Trained operators only**: the laser is powered up and adjusted only by briefed demonstrators; the public only ever interacts with the smart target and its peripheral, never with the beam path itself.
+- **Pre-session checks**: interlock function and enclosure integrity are tested as part of the final rehearsal before every session (see [Session Description](#session-description)).
 
 | Hazard | Likelihood | Severity | Mitigation |
 |--------|-----------|---------|------------|
-| | | | |
+| Direct or specularly-reflected exposure to the Class 3B, 980 nm laser beam (eye/skin injury) | Low | High | Beam fully enclosed during operation; hardware interlock cuts laser power the instant the enclosure is opened; alignment done at minimum power with an IR detector card, never by eye. |
+| Interlock failure or bypass, allowing the enclosure to be opened while the laser is energised | Low | High | Interlock wired directly into the driver's hardware interlock input (fails safe, not software-controlled); function-tested before every session as part of the final rehearsal. |
+| Residual beam or reflection escaping via the enclosure's open top | Low | Medium | Beam path kept low within the enclosure, well below the top rim; laser safety panel attenuates the forward-facing side; demonstrators do not reach over the open top while the laser is energised; warning signage on the enclosure. |
+| Invisible (980 nm) beam causing unaware exposure during setup/alignment | Low | Medium | NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) used to visualise and align the beam at minimum power before any full-power operation; PPE (IR-rated laser safety eyewear) worn during alignment. |
+| Electric shock or fire from mains-powered laser/LED drivers, amplifier, and oscilloscope | Low | Medium | Only PAT-tested Thorlabs/lab bench equipment used; cables routed and strain-relieved away from foot traffic; all equipment powered down between sessions; no modification of mains wiring. |
+| Manual handling injury while lifting/mounting the optical breadboards and enclosure onto the Mobile Photonics Bike | Medium | Medium | Two-person lift for breadboards and enclosure; equipment secured to the bike's designed mounting points before travel; team briefed on manual handling technique beforehand. |
+| Trip or entanglement hazard from cabling and equipment in a public walkway | Medium | Low | Cables routed behind the breadboards and taped down; demonstration area kept clear of the public path; demonstrators stationed at each setup throughout the session. |
+| Unsupervised public contact with laser hardware or its enclosure | Low | Medium | Enclosure keeps all laser hardware inaccessible to the public; a demonstrator is present at Setup 2 at all times; public interaction limited to the peripherals outside the enclosure. |
+| Eye exposure to the visible LED beam in Setup 1 | Low | Low | LED (Class 1/2 equivalent, well below laser AELs); beam intentionally aimed away from the public; brief, supervised exposure only. |
 
 !!! warning "This section must be approved by UCL before the demonstration can take place."
