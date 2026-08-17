@@ -6,11 +6,11 @@
 
 !!! question "What is the demonstration about? Describe it in a few sentences as if explaining to a non-specialist."
 
-As a new demonstration for the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe), we propose **two setups** based on the [Light Commands study](https://lightcommands.com/) in which the injection of voice commands into smart appliences using a light source modulated with an audio signal.
+As a new demonstration for the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe), we propose **two setups** based on the [Light Commands study](https://lightcommands.com/) in which the injection of voice commands into smart appliances using a light source modulated with an audio signal.
 
-The **first setup** would utilise a collimated LED as its light source, and target a microphone connected to an amplifer and oscilloscope. This demonstration is focused on the first principles of modulating a signal from one medium to another, and illustrating the notion of signal quality.
+The **first setup** would utilise a collimated LED as its light source, and target a microphone connected to an amplifier and oscilloscope. This demonstration is focused on the first principles of modulating a signal from one medium to another, and illustrating the notion of signal quality.
 
-The **second setup** would utilise a laser source to activate a smart target (home assistant, smartphone...), reproducing the results of the [original study](https://arxiv.org/pdf/2006.11946). The choise of a laser source is justified by the variance in the reported minimum power required for voice command injection at 30cm distance for different devices, ranging from 0.5mW for a Google Home to 60mW for a Samsung Galaxy S9. Thus, this demo is initially designed for a worst case scenario of 60mW activation power, and is designed to be fully enclosed to maximise safety.  
+The **second setup** would utilise a laser source to activate a smart target (home assistant, smartphone...), reproducing the results of the [original study](https://arxiv.org/pdf/2006.11946). The choice of a laser source is justified by the variance in the reported minimum power required for voice command injection at 30cm distance for different devices, ranging from 0.5mW for a Google Home to 60mW for a Samsung Galaxy S9. Thus, this demo is initially designed for a worst case scenario of 60mW activation power, and is designed to be fully enclosed to maximise safety.  
 
 ---
 
@@ -18,7 +18,7 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 
 !!! question "What concepts in optics and photonics does this demonstration illustrate? What should a member of the public take away from it?"
 
-- **Showcase** how a signal carrying information (in our case a voice command) can be carried over different media (accoustic, electronic, optical), and what mechanisms are used to convert from one medium to another (microphone, optical modulation).
+- **Showcase** how a signal carrying information (in our case a voice command) can be carried over different media (acoustic, electronic, optical), and what mechanisms are used to convert from one medium to another (microphone, optical modulation).
 - **Introduce** the notion of *signal to noise ratio*, **explain** how the power per surface area at the target impacts this metric, and **demonstrate** what influences this metric (input power, beam focus, distance to target). 
 
 ---
@@ -30,11 +30,11 @@ The **second setup** would utilise a laser source to activate a smart target (ho
 **Setup**
 
 - The team sets up the two demos on opposite ends of the Mobile Photonics Lab, and performs the necessary alignment using personal protective equipment (PPE).
-- Before the sessions starts, all the features of the demos are tested as a final rehersal, with particular emphasis on testing laser safety features.
+- Before the sessions starts, all the features of the demos are tested as a final rehearsal, with particular emphasis on testing laser safety features.
 
 **Demo 1 - LED light source to Microphone**
 
-1. A signal (coming from a microphone, a recorded audio, or a signal generator) is modulated onto the light of a collimated LED and directed onto a microphone connected to an amplifer and an oscilloscope, which is used to visualise the received signal.
+1. A signal (coming from a microphone, a recorded audio, or a signal generator) is modulated onto the light of a collimated LED and directed onto a microphone connected to an amplifier and an oscilloscope, which is used to visualise the received signal.
 2. By changing the input power of the LED and/or the beam width, the impact of these parameters on the signal quality is illustrated.
 
 **Demo 2 - Laser light source to Smart Target**
@@ -65,8 +65,8 @@ flowchart LR
         direction LR
         Source --> LDR[LED driver]
         LDR --> LED
-        LED[LED] -.-> DPG[Diaphragme]
-        DPG -.-> COL[Colimator]
+        LED[LED] -.-> DPG[Diaphragm]
+        DPG -.-> COL[Collimator]
     end
     subgraph Rx
         direction LR
@@ -91,7 +91,7 @@ flowchart LR
         INT -- yes --> LAS[Laser]
         subgraph Tx
             direction LR
-            LAS -.-> COL[Colimator]
+            LAS -.-> COL[Collimator]
         end
         subgraph Rx
             direction LR
@@ -109,17 +109,31 @@ flowchart LR
 
 !!! question "List all parts used in the transmitter (Tx), including model numbers where known."
 
+**Audio source**
+
+| Demo | Part | Model / Reference | Notes |
+|------|------|-------------------|-------|
+| **1** | Signal generator | Can borrow equipment at UCL, but **TBD** for other locations. There are very cheap [DIY kits](https://www.amazon.co.uk/DollaTek-Precision-Generator-5Hz-400kHz-Adjustable/dp/B09CG1CXYH/ref=sr_1_5?crid=HSIXNLDP1BDF&dib=eyJ2IjoiMSJ9.0wtKxKN72szg-TBBLvVFWWx8Ml_8r-wb9LO1yBC1cuip71xQr3pBLIT9DBrAD68a7a1hGDjS_MEHpctRzXuT7UKpF-mYZbaLrkUK7FRqh9GTpfncs6D_03Xw402tjHWLsns367T0KSDMoXU4E1ZIJbKt6MVlol_Mqe2QkL5qGeT39d-LZg0fzldsoSWiewwvCK2kSRwvietpAE6CoIlNjFxqr01DYd9-GJBLQ0SMoOEEbVac18v3hFsLOvXeZtcWHqPVhS2nXo1Oi86-X8F4nv3bRlFoA07hgyVQwPYnOes.Ud-Y-VMjtMCEFLxm8dl2aUI4EacsEs0R6zN4r9GaGOw&dib_tag=se&keywords=diy+signal+generator&qid=1786961400&sprefix=diy+signal+generator%2Caps%2C124&sr=8-5) on Amazon. | Used to modulate pure tones to illustrate signal to noise ratio considerations.  |
+| **1&2** | Computer with audio file | | Connected to an amplifier through a jack cable. |
+| **1&2** | Microphone | [MEMS microphone](https://www.sparkfun.com/sparkfun-analog-mems-microphone-breakout-sph8878lr5h-1.html?srsltid=AfmBOorJR_O9TRLpsM3VKT8S3gT8oLNcQGy8QEvru-dUsHdxy7WYczSl) | Used in the Lightcommands study. |
+| **1&2** | Jack to breadboard connector | | Connects the MEMS microphone to the audio amplifier. |
+| **1&2** | Microphone amplifier | [With speaker](https://www.aliexpress.com/item/1005008978691693.html?src=google&src=google&albch=shopping&acnt=603-455-9033&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_oFgTQeV&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005008978691693&ds_e_product_merchant_id=5558341424&ds_e_product_country=GB&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=23634837834&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=23634872088&gbraid=0AAAABCRFad-11uVnMhmVAd1T4jeV-ae9r&gclid=Cj0KCQjw4orUBhCjARIsAIbF3qxqYTl5ywh0K1r1bAmPTsok-qVuDO4BY-u9vgjxIne6pBxGSMCLEW0aAqI9EALw_wcB), [Commercial amplifier](https://www.amazon.com/gp/product/B01MS22YWV?th=1) | The Commercial amplifier is the one used in the Lightcommands study, and can be connected to either the microphone or a computer playing an audio file. |
+
+
+**Optical modulation**
+
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
 | **1** | LED Driver | [CD40](https://www.thorlabs.com/4.0-a-led-driver) or [T-Cube™ LED Driver](https://www.thorlabs.com/t-cube-tm-led-driver) | Modulation input connected to analogue source delivering a 0-5V signal. |
-| **1** | LED | [M450LP2](https://www.thorlabs.com/item/M450LP2) | Need a visible light LED which can achieve resonably high power in order to achieve reasonable SNR|
+| **1** | LED | [M450LP2](https://www.thorlabs.com/item/M450LP2) | Need a visible light LED which can achieve reasonably high power in order to achieve reasonable SNR|
 | **1** | LED Cage Plate mount with SM1 thread | [CP33/M](https://www.thorlabs.com/item/CP33_M) | |
-| **1** | Diaphragme with SM1 threads | [SM1D12](https://www.thorlabs.com/item/SM1D12)| Used as an aditional control for LED Power|
-| **1** | Collimation adaptor with SM1 thread| [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) | Preferably a zoom housing in order to desmonstrate the impact of beam focus on received signal.|
-| **2** | Laser Driver | [LDC205C](https://www.thorlabs.com/item/LDC205C) | Modulation input connected to analogue source delivering a 0-5V signal, and interlock pin connected to interlock lever swich.|
+| **1** | Diaphragm with SM1 threads | [SM1D12](https://www.thorlabs.com/item/SM1D12)| Used as an additional control for LED Power|
+| **1** | Collimation adaptor with SM1 thread| [SM1U25-A](https://www.thorlabs.com/item/SM1U25-A) | Preferably a zoom housing in order to demonstrate the impact of beam focus on received signal.|
+| **2** | Laser Driver | [LDC205C](https://www.thorlabs.com/item/LDC205C) | Modulation input connected to analogue source delivering a 0-5V signal, and interlock pin connected to interlock lever switch.|
 | **2** | Laser diode | **TBD** | Must reach 60mW of power. However not sure which to choose. Visible light would be easier to align at low power, but far IR would be more safe. |
 | **2** | Strain relief cable to DB8| [SR9A-DB9](https://www.thorlabs.com/item/SR9A-DB9) | Need the correct pin code to interface with diode|
 | **2** | Cage Plate Collimation Mount | [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) | |
+
 
 ---
 
@@ -129,8 +143,13 @@ flowchart LR
 
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **1** | | | |
-| **2** | | | |
+| **1** | Microphone | [MEMS microphone](https://www.sparkfun.com/sparkfun-analog-mems-microphone-breakout-sph8878lr5h-1.html?srsltid=AfmBOorJR_O9TRLpsM3VKT8S3gT8oLNcQGy8QEvru-dUsHdxy7WYczSl) | This is the same microphone used in the original LightCommands study. |
+| **1** | Alligator clip holder | [Example](https://www.amazon.co.uk/EUQWOSDD-Alligator-Adjustable-Electronics-Soldering/dp/B0H2YG83CG/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.7UlAYtLy5DyhBWjkxay0OomHUKROmj4FyPYlEi1YG85xthY7JApqsvQY7gRK6DmR88N8rWnu4dpcqcJ3nuO42zHfgx45cdBldaAazxong1ZwUCWOtW-_0iFPQx5KRprZL_pJQBWCPxs28oWEzq68nkJ983mPFnZKXVX3zFFSCrTNWFw7_rM6zizCudUl_veN31CnVzT-6s_Ib84e1xTkFY6hwhJvNDaf_zb9DyHH4wkqnR1iZoHypa8RphImSLS20nTjQ6roaUKuN12nFWX_N3mO2pnUnjjHP4Epwhah56c.7OAMFjC0lOQUVpkUe9XHGqBE4hYenGFNKb6Ao9-w2w0&dib_tag=se&keywords=soldering+clips&qid=1786960860&sr=8-3-spons&aref=992pLnY4V6&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) | Used in the LightCommands study to hold the microphone.|
+| **1** | Audio amplifier | [With speaker](https://www.aliexpress.com/item/1005008978691693.html?src=google&src=google&albch=shopping&acnt=603-455-9033&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_oFgTQeV&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005008978691693&ds_e_product_merchant_id=5558341424&ds_e_product_country=GB&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=23634837834&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=23634872088&gbraid=0AAAABCRFad-11uVnMhmVAd1T4jeV-ae9r&gclid=Cj0KCQjw4orUBhCjARIsAIbF3qxqYTl5ywh0K1r1bAmPTsok-qVuDO4BY-u9vgjxIne6pBxGSMCLEW0aAqI9EALw_wcB), [Commercial amplifier](https://www.amazon.com/gp/product/B01MS22YWV?th=1) | Used to amplify the audio signal, to be connected to a speaker and/or an oscilloscope|
+| **1** | Oscilloscope | Can borrow equipment at UCL, but **TBD** for other locations. There are very cheap [DIY kits](https://www.amazon.co.uk/Treedix-Oscilloscope-Handheld-Real-Time-Sampling/dp/B0C85S78GY/ref=sr_1_5?crid=1NEUBW09IQYA7&dib=eyJ2IjoiMSJ9.H9DIHbhw4FeyXoXASVAe4XSv9G3WjfCGlMXlogTJOvTjj2r_osEPlKB1wgHY-HqAUgDXL7--KPd6ddFmYNmDUVJ-7fGv_BmLUz4qOMc1RdyiwGN74Dpc4GWP0fFS2dIqSEiIGYlAt7v_RS30HoF_w_UFoBepo_54g9E-iIGFS5LVrzqLsxREZH7YBAMFdxq-E9gdWAcnTZymJI6oLLPAWBmKr6D4aoV49dw4T5M79KVEVjdCzAbUgmk8sPp0WVrIGkuBickgcMx1jzMBKlUjQcZ6sg4qLJ3cxi9CSohFX0M.tTTN_dSwMImGVhltdT_G6N1H4WQZsTWXdkQuAeXl0vk&dib_tag=se&keywords=diy+oscilloscope&qid=1786961372&sprefix=DIY+osc%2Caps%2C125&sr=8-5) on Amazon. | Used to visualise the received signal, and perform spectral analysis to illustrate signal to noise ratio considerations. |
+| **2** | Smart device | **TBD**: Smartphone, Google Home... | Ideal case as the most recognisable items on which to demonstrate Light Commands.|
+| **2** | Custom local audio to text system | Smartphone, Google Home... | In some venues, poor network or firewall restrictions might prevent the use of smart devices. We are thus looking into designing an audio to text device that would run locally on a Raspberry Pi or laptop.|
+| **2** | Stage for the target | **TBD** | Need to find the best solution to safely align the microphone of the target with the laser beam.|
 
 ---
 
@@ -140,10 +159,11 @@ flowchart LR
 
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **2** | NIR Detector Card | [VRC7](https://www.thorlabs.com/item/VRC7) | Used at low power to align the laser with the target and demonstrate the presence of IR light. |
+| **2** | NIR Detector Card | [VRC7](https://www.thorlabs.com/item/VRC7) | Used at low power to align the laser with the target and demonstrate the presence of IR light (if we use a NIR diode). |
 | **2** | Enclosure | [XE25C11T/M](https://www.thorlabs.com/item/XE25C11T_M) | Top open, with laser safety panel facing the public.|
 | **2** | Laser Safety Panel | [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)| Exact panel will depend of wavelength of laser |
-| **2** | Interlock system | [Interlock Switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
+| **2** | Interlock system | [Lever switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
+| **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
 
 ---
@@ -173,7 +193,7 @@ Because the laser diode, and beam path are fully housed inside the interlocked [
 | Direct or specularly-reflected exposure to the Class 3B, 980 nm laser beam (eye/skin injury) | Low | High | Beam fully enclosed during operation; hardware interlock cuts laser power the instant the enclosure is opened; alignment done at minimum power with an IR detector card, never by eye. |
 | Interlock failure or bypass, allowing the enclosure to be opened while the laser is energised | Low | High | Interlock wired directly into the driver's hardware interlock input (fails safe, not software-controlled); function-tested before every session as part of the final rehearsal. |
 | Residual beam or reflection escaping via the enclosure's open top | Low | Medium | Beam path kept low within the enclosure, well below the top rim; laser safety panel attenuates the forward-facing side; demonstrators do not reach over the open top while the laser is energised; warning signage on the enclosure. |
-| Invisible (980 nm) beam causing unaware exposure during setup/alignment | Low | Medium | NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) used to visualise and align the beam at minimum power before any full-power operation; PPE (IR-rated laser safety eyewear) worn during alignment. |
+| Invisible beam causing unaware exposure during setup/alignment if IR laser diode is used | Low | Medium | NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) used to visualise and align the beam at minimum power before any full-power operation; PPE (IR-rated laser safety eyewear) worn during alignment. |
 | Electric shock or fire from mains-powered laser/LED drivers, amplifier, and oscilloscope | Low | Medium | Only PAT-tested Thorlabs/lab bench equipment used; cables routed and strain-relieved away from foot traffic; all equipment powered down between sessions; no modification of mains wiring. |
 | Manual handling injury while lifting/mounting the optical breadboards and enclosure onto the Mobile Photonics Bike | Medium | Medium | Two-person lift for breadboards and enclosure; equipment secured to the bike's designed mounting points before travel; team briefed on manual handling technique beforehand. |
 | Trip or entanglement hazard from cabling and equipment in a public walkway | Medium | Low | Cables routed behind the breadboards and taped down; demonstration area kept clear of the public path; demonstrators stationed at each setup throughout the session. |
