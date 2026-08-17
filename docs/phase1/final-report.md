@@ -152,18 +152,31 @@ flowchart LR
 
 !!! question "List all parts used in the receiver (Rx), including the target voice-activated device and any supporting hardware."
 
+**Demo 1 — Microphone & mounting**
+
 | Demo | Part | Model / Reference | Notes |
 |------|------|-------------------|-------|
-| **1** | Microphone | [MEMS microphone](https://www.sparkfun.com/sparkfun-analog-mems-microphone-breakout-sph8878lr5h-1.html?srsltid=AfmBOorJR_O9TRLpsM3VKT8S3gT8oLNcQGy8QEvru-dUsHdxy7WYczSl) | This is the same microphone used in the original LightCommands study. |
-| **1** | Alligator clip holder | [Example](https://www.amazon.co.uk/EUQWOSDD-Alligator-Adjustable-Electronics-Soldering/dp/B0H2YG83CG/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.7UlAYtLy5DyhBWjkxay0OomHUKROmj4FyPYlEi1YG85xthY7JApqsvQY7gRK6DmR88N8rWnu4dpcqcJ3nuO42zHfgx45cdBldaAazxong1ZwUCWOtW-_0iFPQx5KRprZL_pJQBWCPxs28oWEzq68nkJ983mPFnZKXVX3zFFSCrTNWFw7_rM6zizCudUl_veN31CnVzT-6s_Ib84e1xTkFY6hwhJvNDaf_zb9DyHH4wkqnR1iZoHypa8RphImSLS20nTjQ6roaUKuN12nFWX_N3mO2pnUnjjHP4Epwhah56c.7OAMFjC0lOQUVpkUe9XHGqBE4hYenGFNKb6Ao9-w2w0&dib_tag=se&keywords=soldering+clips&qid=1786960860&sr=8-3-spons&aref=992pLnY4V6&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) | Used in the LightCommands study to hold the microphone.|
+| **1** | Microphone | [ADMP401](https://www.amazon.com/SparkFun-MEMS-Microphone-Breakout-INMP401/dp/B004TGZJ1G) | Same part as used in the original LightCommands study. The receiver team has some alternative MEMS mic candidates in mind in case this one is hard to source. |
+| **1** | Dovetail optical rail | [RLA600/M](https://www.thorlabs.com/item/RLA600_M) (600 mm) or [RLA900/M](https://www.thorlabs.com/item/RLA900_M) (900 mm) | Length depends on how much room is available on the bike. The mic slides along this rail towards/away from the beam to show, live, that SNR and the waveform on the scope visibly degrade with distance — the main teaching moment of this station, so the mount is designed around it. |
+| **1** | Rail carrier | [RC2/M](https://www.thorlabs.com/item/RC2_M) | Sliding element on the dovetail rail that carries the microphone back and forth along the beam axis. |
+| **1** | Transverse rail carrier | [RC3](https://www.thorlabs.com/item/RC3) | Clamps onto the main rail and provides a dovetail perpendicular to it, for coarse lateral adjustment to centre the mic in the beam. |
+| **1** | Custom 3D-printed mic adapter | Custom (team-built) | Adapts the ADMP401 breakout board onto the rail carrier or an optical post; not a Thorlabs part. |
+| **1** | Amplifier table clamp | [CL5A](https://www.thorlabs.com/item/CL5A) | L-shaped table clamp used to fix the audio amplifier to the breadboard. |
 | **1** | Audio amplifier | [With speaker](https://www.aliexpress.com/item/1005008978691693.html?src=google&src=google&albch=shopping&acnt=603-455-9033&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_oFgTQeV&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005008978691693&ds_e_product_merchant_id=5558341424&ds_e_product_country=GB&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=23634837834&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=23634872088&gbraid=0AAAABCRFad-11uVnMhmVAd1T4jeV-ae9r&gclid=Cj0KCQjw4orUBhCjARIsAIbF3qxqYTl5ywh0K1r1bAmPTsok-qVuDO4BY-u9vgjxIne6pBxGSMCLEW0aAqI9EALw_wcB), [Commercial amplifier](https://www.amazon.com/gp/product/B01MS22YWV?th=1) | Used to amplify the audio signal, to be connected to a speaker and/or an oscilloscope|
 | **1** | Oscilloscope | Can borrow equipment at UCL, but **TBD** for other locations. There are very cheap [DIY kits](https://www.amazon.co.uk/Treedix-Oscilloscope-Handheld-Real-Time-Sampling/dp/B0C85S78GY/ref=sr_1_5?crid=1NEUBW09IQYA7&dib=eyJ2IjoiMSJ9.H9DIHbhw4FeyXoXASVAe4XSv9G3WjfCGlMXlogTJOvTjj2r_osEPlKB1wgHY-HqAUgDXL7--KPd6ddFmYNmDUVJ-7fGv_BmLUz4qOMc1RdyiwGN74Dpc4GWP0fFS2dIqSEiIGYlAt7v_RS30HoF_w_UFoBepo_54g9E-iIGFS5LVrzqLsxREZH7YBAMFdxq-E9gdWAcnTZymJI6oLLPAWBmKr6D4aoV49dw4T5M79KVEVjdCzAbUgmk8sPp0WVrIGkuBickgcMx1jzMBKlUjQcZ6sg4qLJ3cxi9CSohFX0M.tTTN_dSwMImGVhltdT_G6N1H4WQZsTWXdkQuAeXl0vk&dib_tag=se&keywords=diy+oscilloscope&qid=1786961372&sprefix=DIY+osc%2Caps%2C125&sr=8-5) on Amazon. | Used to visualise the received signal, and perform spectral analysis to illustrate signal to noise ratio considerations. |
-| **2** | Smart device | **TBD**: Smartphone, Google Home... | Ideal case as the most recognisable items on which to demonstrate Light Commands.|
-| **2** | Custom local audio to text system | **TBD** | In some venues, poor network or firewall restrictions might prevent the use of smart devices. We are thus looking into designing an audio to text device that would run locally on a Raspberry Pi or laptop.|
-| **2** | Stage for the target | **TBD** | Need to find the best solution to safely align the microphone of the target with the laser beam.|
+
+**Demo 2 — Target & peripheral**
+
+| Demo | Part | Model / Reference | Notes |
+|------|------|-------------------|-------|
+| **2** | Smart target — Plan 1 | **TBD**: Google Home | The most sensitive device reported in the original study (0.5 mW at 30 cm, vs. 60 mW for a Samsung Galaxy S9), which keeps our required laser power lowest. Worth adding to the ask list for Thorlabs, to see if they'd be willing to provide one. Also needs a 3D-printed holder for the device. |
+| **2** | Smart target — Plan 2 | Volunteer's phone | Fallback if a Google Home isn't available. Doable, but needs significantly more power to activate. |
+| **2** | Stage for the target | **TBD** | 3D-printed holder needed to safely align the target's microphone with the laser beam. |
+| **2** | Peripheral (visible confirmation) | e.g. TP-Link Kasa/Tapo smart plug or bulb | Voice command (e.g. "turn on the lamp") drives this so the audience gets a clear, visible confirmation the target was activated. Relies on Wi-Fi, since the assistant sends the audio to the cloud for recognition — plan is to bring our own hotspot. |
+| **2** | Local voice-assistant fallback (no internet) | Raspberry Pi running Home Assistant + local wake word engine + Zigbee bulb | Bypasses the Google/Alexa cloud entirely so the whole recognition-to-peripheral chain stays on LAN. More setup work than the hotspot plan, kept on the table as a fallback for venues with no internet access at all. |
 
 !!! note "Prototyping before Phase 2"
-    The custom receive chain from the microphone through to the oscilloscope, along with the other custom systems in this section (the local audio-to-text system and the target alignment stage), are not off-the-shelf parts, and will be prototyped and tested at UCL ahead of Phase 2.
+    The custom receive chain from the microphone through to the oscilloscope, the 3D-printed mic adapter and target stage, and the local voice-assistant fallback, are not off-the-shelf parts, and will be prototyped and tested at UCL ahead of Phase 2.
 
 ---
 
@@ -178,6 +191,7 @@ flowchart LR
 | **2** | Laser Safety Panel | [LWxP2/M](https://www.thorlabs.com/item/LW1P2_M)| Exact panel will depend of wavelength of laser |
 | **2** | Interlock system | [Lever switch](https://www.amazon.co.uk/Gebildet-pieces-Miniature-Switch-Momentary/dp/B07T9DWMMG/ref=asc_df_B07T9DWMMG?mcid=f01cee05a660392c83d310c43db39473&tag=googshopuk-21&linkCode=df0&hvadid=697363582268&hvpos=&hvnetw=g&hvrand=12826283976019115331&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045885&hvtargid=pla-783906794563&hvocijid=12826283976019115331-B07T9DWMMG-&hvexpln=0&gad_source=1&th=1) + [2.5mm jack connector](https://www.digikey.co.uk/en/products/detail/tensility-international-corp/053-0280R/701163?gclsrc=aw.ds&gad_source=1&gad_campaignid=23249465655&gbraid=0AAAAADrbLlgrKaT7nPn8TNfSxlsX8dlEd&gclid=Cj0KCQjwv4XUBhDBARIsAE6bQUSy7EdxlOymtTAqSwjYG2OdEJeFpZBuJbX0XvQ_-qaeP-_sBIK-icoaAg55EALw_wcB) | Thorlabs laser drivers seem to all use 2.5mm jack interlock inputs |
 | **1&2** | Optical breadboards (x2) | [MB4560/M](https://www.thorlabs.com/item/MB4560_M) | The enclosure for demo 2 is 525mmx375mm, but demo 1 could use a smaller breadboard |
+| **1&2** | Optical posts, post holders & bases | [TR75/M](https://www.thorlabs.com/item/TR75_M) post + [PH75/M](https://www.thorlabs.com/item/PH75_M) post holder + [BA2/M](https://www.thorlabs.com/item/BA2_M) base | Used both on the dovetail rail and directly on the breadboard. UCL's 6th floor lab may already have some of these — worth checking before ordering. |
 
 ---
 

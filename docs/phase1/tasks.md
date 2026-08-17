@@ -383,7 +383,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    We're targeting a commercial smart device with a MEMS microphone — a smartphone or a home assistant (e.g. Google Home) — as these are the most recognisable to a public audience. The exact model is still **TBD**; as a fallback for venues with poor network/firewall access to cloud assistants, we're also looking into a custom, locally-run audio-to-text system (e.g. on a Raspberry Pi). See the [Final Report — Receiver Parts](final-report.md#receiver-parts).
+    Two plans: **Plan 1** — a Google Home, the most sensitive device reported in the original study (0.5 mW at 30 cm, vs. 60 mW for a Samsung Galaxy S9), which keeps our required laser power lowest; worth adding to the ask list for Thorlabs to see if they'd be willing to provide one. **Plan 2** — a volunteer's phone as a fallback, which is doable but needs significantly more power to activate. See the [Final Report — Receiver Parts](final-report.md#receiver-parts).
 
     ---
 
@@ -480,7 +480,9 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    The target (or, for Demo 1, the MEMS microphone) needs to sit on a stage so its microphone can be positioned precisely at the laser/LED's focal point — this stage is still **TBD**. For low-power alignment, an NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) is used to visualise where the invisible laser beam is actually landing before bringing the target into position. See the [Final Report — Receiver Parts](final-report.md#receiver-parts) and [Other Parts](final-report.md#other-parts-mounts-enclosure-etc).
+    **Demo 1:** the microphone is mounted on a dovetail rail ([RLA600/M](https://www.thorlabs.com/item/RLA600_M) or [RLA900/M](https://www.thorlabs.com/item/RLA900_M), depending on space on the bike) via a sliding [RC2/M](https://www.thorlabs.com/item/RC2_M) rail carrier, so it can be moved back and forth along the beam axis to show live how SNR and the scope waveform degrade with distance — the main teaching moment of this station. An [RC3](https://www.thorlabs.com/item/RC3) transverse carrier gives coarse lateral centring, and a custom 3D-printed adapter fits the ADMP401 breakout board to the rail carrier or an optical post.
+
+    **Demo 2:** the target (Google Home or a volunteer's phone) sits in a custom 3D-printed holder, aligned using an NIR detector card ([VRC7](https://www.thorlabs.com/item/VRC7)) at low power before bringing the target into the beam. See the [Final Report — Receiver Parts](final-report.md#receiver-parts) and [Other Parts](final-report.md#other-parts-mounts-enclosure-etc).
 
 ---
 
@@ -530,7 +532,7 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    [CP33/M](https://www.thorlabs.com/item/CP33_M) LED cage plate mount and [SM1D12](https://www.thorlabs.com/item/SM1D12) diaphragm for Demo 1; [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) cage plate collimation mount for Demo 2's laser diode. See the [Final Report — Transmitter Parts](final-report.md#transmitter-parts).
+    [CP33/M](https://www.thorlabs.com/item/CP33_M) LED cage plate mount and [SM1D12](https://www.thorlabs.com/item/SM1D12) diaphragm for Demo 1; [LDH56-P2/M](https://www.thorlabs.com/item/LDH56-P2_M) cage plate collimation mount for Demo 2's laser diode. Across both demos we're also planning to use [TR75/M](https://www.thorlabs.com/item/TR75_M) posts, [PH75/M](https://www.thorlabs.com/item/PH75_M) post holders, and [BA2/M](https://www.thorlabs.com/item/BA2_M) bases (usable both on the dovetail rail and directly on the breadboard — UCL's 6th floor lab may already have some of these), plus a [CL5A](https://www.thorlabs.com/item/CL5A) table clamp to fix Demo 1's audio amplifier to the breadboard. See the [Final Report — Transmitter Parts](final-report.md#transmitter-parts) and [Receiver Parts](final-report.md#receiver-parts).
 
     ---
 
@@ -554,4 +556,4 @@ Each group leader registers all of their group's members on the [Overview page](
 
     **Answer**
 
-    Beyond simply activating the smart target's voice assistant, we want the target to drive a connected peripheral (e.g. a smart lamp) so the audience gets a clear, visible confirmation that the injected command worked. We'll also vary the laser's input power live to demonstrate the concept of a minimum activation power for the target. See the [Final Report — Session Description](final-report.md#session-description).
+    Beyond simply activating the smart target's voice assistant, we want the target to drive a connected **peripheral** — e.g. a TP-Link Kasa/Tapo smart plug or bulb — so a command like "turn on the lamp" gives the audience a clear, visible confirmation that it worked. This relies on Wi-Fi, since the assistant sends the audio to the cloud for recognition, so our main plan is to bring our own hotspot. As a fully local fallback for venues with no internet at all, we're also keeping on the table a Raspberry Pi running Home Assistant with a local wake word engine driving a Zigbee bulb, so the whole recognition-to-peripheral chain stays on LAN (more setup work, but worth having in reserve). We'll also vary the laser's input power live to demonstrate the concept of a minimum activation power for the target. See the [Final Report — Receiver Parts](final-report.md#receiver-parts) and [Session Description](final-report.md#session-description).
