@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: uclightcommands-docs
+Version: 0.1.0
+Summary: MKDocs environment for the UCLightcommands hackathon site
+Requires-Python: >=3.10
+Requires-Dist: mkdocs>=1.6.0
+Requires-Dist: mkdocs-material>=9.7.7
