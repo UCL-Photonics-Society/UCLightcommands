@@ -1,6 +1,6 @@
 # 💡 UCLightcommands Hackathon
 
-Welcome to the UCL Photonics Society x Thorlabs UK LightCommands hackathon website.
+Welcome to the UCL Photonics Society x Thorlabs x LightCommands hackathon website.
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin: 2rem 0;">
   <img src="resources/logos/logo_purple.png" alt="UCL Photonics Society" style="height: 120px;">
@@ -28,7 +28,7 @@ Concretely, the goals are to:
 
 ### 🚲 Thorlabs' Mobile Photonics Bike
 
-As one of the top distributors of optical components in the world, [Thorlabs](https://www.thorlabs.com/) is commited to multiple initiatives aimed at making the field of Photonics more accecible. One of these initiatives is the [Mobile Photonics Bike](https://www.thorlabs.com/mobile-photonics-lab---europe), an easily maneuverable and eco-friendly mobile lab which transports interactive optics and photonics demonstrations to university campuses. 
+Thorlabs is a leading designer and manufacturer of photonics equipment. They are committed to making photonics more accessible for all via transformative educational experiences.
 
 <figure markdown="span">
   ![The Thorlabs Mobile Photonics Bike at UCL](resources/photos/thorlabs-bike-ucl.jpeg)
@@ -100,4 +100,4 @@ The UCL Photonics Society is a student society at University College London dedi
 
 ### ❤️ Thorlabs
 
-[Thorlabs](https://www.thorlabs.com/) is a leading manufacturer and distributor of photonics equipment, supplying lasers, optics, optomechanics, and imaging systems to researchers and engineers worldwide. Through initiatives such as the Mobile Photonics Lab, Thorlabs actively supports photonics education and outreach at universities across Europe.
+[Thorlabs](https://www.thorlabs.com/) is a leading designer and manufacturer of photonics equipment, supplying lasers, optics, optomechanics, and imaging systems to researchers and engineers worldwide. Through initiatives such as the Mobile Photonics Lab, Thorlabs actively supports photonics education and outreach at universities across Europe.
