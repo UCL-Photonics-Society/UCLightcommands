@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-uclightcommands_docs.egg-info/PKG-INFO
-uclightcommands_docs.egg-info/SOURCES.txt
-uclightcommands_docs.egg-info/dependency_links.txt
-uclightcommands_docs.egg-info/requires.txt
-uclightcommands_docs.egg-info/top_level.txt
